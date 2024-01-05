@@ -1,0 +1,43 @@
+/* Titre de la Page */
+h1{
+    text-align: center;
+    text-decoration: underline;
+    padding: 20px 0px 20px 0px;
+}
+/* classe des 2 images en haut de la page */
+.AutorailsHaut{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 50px;
+}
+/* Id image AutorailsHO */
+#AutorailsHO{
+    width: 50%;
+    height: 90%;
+}
+/* Id image AutorailsN*/
+#AutorailsN{
+    width: 80%;
+    height: 80%;
+}
+/* Id image AutorailsG*/
+#AutorailsG{
+    width: 85%;
+}
+/* Classe AutorailsHO*/
+.AutorailsHO{
+  padding-right: 140px;
+}
+/* Classe AutorailsG */
+.AutorailsG{
+    padding-left: 200px;
+}
+.AutorailsG p{
+    margin-left: 39%;
+    padding-bottom: 20px;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+}

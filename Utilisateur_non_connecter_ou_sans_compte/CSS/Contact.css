@@ -1,0 +1,74 @@
+/* Titre du Formulaire */
+h1{
+    text-decoration: underline;
+}
+/* Classe pour tous le formulaire */
+.FormulaireContact{
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 500px;
+    height: 510px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* classe pour tous les inputs */
+.formulaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* padding: 40px; */
+}
+
+/* Id input Sujet */
+#Sujet{
+    width: 300px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+}
+/* Classe Input + label Sujet*/
+.Sujet{
+    padding-bottom: 15px;
+    padding-top: 30px;
+}
+/* Id Input Fichier */
+#Fichier{
+    width: 300px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+}
+/* Classe Input + label Fichier */
+.Fichier{
+    padding-bottom: 15px;
+}
+
+/* Id input Email */
+#Email{
+    width: 300px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+}
+/* Classe Input + label Email*/
+.Email{
+    padding-bottom: 15px;
+}
+
+/* Id input Message */
+#Message{
+    width: 300px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+}
+/* Classe Input + label Message */
+.Message{
+    padding-bottom: 15px;
+}

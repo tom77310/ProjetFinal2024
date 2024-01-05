@@ -1,0 +1,63 @@
+/* Titre de la Page */
+h1{
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px 0px 10px 0px;
+}
+/* classe des 2 images en haut de la page */
+.WagonsBacheHaut{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+/* Id image wagonBacheTailleHO */
+#WagonBacheTailleHO{
+    width: 300px;
+    height: 200px;
+}
+/* Id image wagonBacheTailleZ*/
+#WagonBacheTailleZ{
+    width: 470px;
+    height: 230px;
+}
+
+/* Classe WagonBacheTailleHO */
+.WagonBacheTailleHO{
+    padding-left: 245px;
+    padding-right: 280px;
+}
+/* Classe WagonBacheTailleZ*/
+.WagonBacheTailleZ{
+    padding-right: 220px;
+}
+
+
+/* classe des 3 images en Bas de la page */
+.WagonsBacheBas{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 80px;
+}
+/* Id image wagonBacheTailleN */
+#WagonBacheTailleN{
+    width: 340px;
+    height: 155px;
+}
+/* Id image wagonBacheTailleG*/
+#WagonBacheTailleG{
+    width: 560px;
+    height: 190px;
+}
+
+/* Classe WagonBacheTailleN*/
+.WagonBacheTailleN{
+    padding-left: 105px;
+    padding-right: 290px;
+}
+/* Classe WagonBacheTailleG */
+.WagonBacheTailleG{
+    padding-right: 220px;
+}

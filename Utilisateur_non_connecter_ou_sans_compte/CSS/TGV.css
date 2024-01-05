@@ -1,0 +1,27 @@
+/* Titre de la Page */
+h1{
+    text-align: center;
+    text-decoration: underline;
+    padding: 20px 0px 20px 0px;
+}
+/* */
+.TGV{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 50px;
+}
+/* Id image TGVHO */
+#TGVHO{
+    width: 50%;
+    height: 90%;
+}
+/* Classe TGVHO*/
+.TGVHO{
+  padding-right: 140px;
+}
+/* Id image TGVN*/
+#TGVN{
+    width: 80%;
+    height: 80%;
+}

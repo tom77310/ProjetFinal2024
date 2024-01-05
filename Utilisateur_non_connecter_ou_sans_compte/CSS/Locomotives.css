@@ -1,0 +1,35 @@
+/* Titre de la Page */
+h1{
+    text-align: center;
+    text-decoration: underline;
+    padding: 33px 0px 95px 0px;
+}
+.Locomotive{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+/* Id image LocomotiveVapeur */
+#LocomotiveVapeur{
+    width: 300px;
+    height: 200px;
+}
+/* Id image LocomotiveDiesel*/
+#LocomotiveDiesel{
+    width: 310px;
+    height: 220px;
+}
+/* Id image LocomotiveElec*/
+#LocomotiveElec{
+    width: 622px;
+    height: 180px;
+}
+/* Classe LocomotiveVapeur */
+.LocomotiveVapeur{
+    padding-left: 80px;
+    padding-right: 120px;
+}
+/* Classe LocomotiveDiesel */
+.LocomotiveDiesel{
+    padding-right: 75px;
+}

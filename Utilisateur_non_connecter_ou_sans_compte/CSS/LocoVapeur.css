@@ -1,0 +1,59 @@
+/* Titre de la Page */
+h1{
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px 0px 10px 0px;
+}
+/* classe des 2 images en haut de la page */
+.LocoVapeurHaut{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+/* Id image LocoVapeurTailleHO */
+#LocoVapeurTailleHO{
+    width: 240px;
+    height: 180px;
+}
+/* Id image LocoVapeurTailleZ*/
+#LocoVapeurTailleZ{
+    width: 340px;
+    height: 200px;
+}
+
+/* Classe LocoVapeurTailleHO */
+.LocoVapeurTailleHO{
+    padding-left: 245px;
+    padding-right: 280px;
+}
+/* Classe LocoVapeurTailleZ*/
+.LocoVapeurTailleZ{
+    padding-right: 220px;
+}
+
+
+/* classe des 3 images en Bas de la page */
+.LocoVapeurBas{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 80px;
+}
+/* Id image LocoVapeurTailleN */
+#LocoVapeurTailleN{
+    width: 335px;
+    height: 140px;
+}
+/* Id image LocoVapeurTailleG*/
+#LocoVapeurTailleG{
+    width: 380px;
+    height: 175px;
+}
+
+/* Classe LocoVapeurTailleN*/
+.LocoVapeurTailleN{
+    padding-left: 105px;
+    padding-right: 290px;
+}
