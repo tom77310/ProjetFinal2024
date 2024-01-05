@@ -1,0 +1,198 @@
+/* CSS Commun aux 4 Pages */
+/* Classe pour le titre et le texte */
+.titre{
+    display: flex;
+    flex-direction: row;
+}
+/* lien de la div classe titre */
+.titre a{
+    padding-right: 300px;
+    padding-left: 40px;
+    padding-top: 10px;
+    color: black;
+}
+
+/* Titre de la page */
+h1{
+    text-decoration: underline;
+    padding-top: 10px;
+}
+/* Lien de la classe droite */
+.droite a{
+    color: black;
+}
+/* classe droite */
+.droite{
+    padding-left: 50%;
+    font-size: 24px;
+}
+/* classe description */
+.description{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 55%;
+    height: 135px;
+    margin: 50px auto;
+}
+/* paragraphe de la classe description */
+.description p{
+    font-size: 24px;
+}
+/* titre de la description */
+.titre_description{
+    text-decoration: underline;
+}
+
+
+
+/* Page Produit Voies HO */
+
+/* Taille HO Voies */
+
+.VoiesTailleHO{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Id Image VoiesTailleHOVue1 */
+#VoiesTailleHOVue1{
+    width: 550px;
+    height: 300px;
+    padding-left: 25px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteHOVoies{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteHOVoies a{
+    color: black;
+}
+/* classe de la div pour la description du produit */
+.descriptionHOVoies{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 55%;
+    height: 100px;
+    margin: 50px auto;
+}
+/* classe de la div de la description du produit en ciblant le paragraphe */
+.descriptionHOVoies p{
+    font-size: 24px;
+}
+/* Taille N Voies */
+
+.VoiesTailleN{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Id Image VoiesTailleNVue1 */
+#VoiesTailleNVue1{
+    width: 675px;
+    height: 300px;
+    padding-left: 25px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteNVoies{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteNVoies a{
+    color: black;
+}
+/* classe de la div pour la description du produit */
+.descriptionNVoies{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 55%;
+    height: 100px;
+    margin: 50px auto;
+}
+/* classe de la div de la description du produit en ciblant le paragraphe */
+.descriptionNVoies p{
+    font-size: 24px;
+}
+/* Taille Z Voies */
+
+.VoiesTailleZ{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Id Image VoiesTailleZVue1 */
+#VoiesTailleZVue1{
+    width: 675px;
+    height: 300px;
+    padding-left: 25px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteZVoies{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteZVoies a{
+    color: black;
+}
+/* classe de la div pour la description du produit */
+.descriptionZVoies{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 55%;
+    height: 100px;
+    margin: 50px auto;
+}
+/* classe de la div de la description du produit en ciblant le paragraphe */
+.descriptionZVoies p{
+    font-size: 24px;
+}
+/* Taille G Voies */
+
+.VoiesTailleG{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Id Image VoiesTailleGVue1 */
+#VoiesTailleGVue1{
+    width: 675px;
+    height: 440px;
+    padding-left: 25px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteGVoies{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteGVoies a{
+    color: black;
+}
+/* classe de la div pour la description du produit */
+.descriptionGVoies{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 55%;
+    height: 100px;
+    margin: 50px auto;
+}
+/* classe de la div de la description du produit en ciblant le paragraphe */
+.descriptionGVoies p{
+    font-size: 24px;
+}

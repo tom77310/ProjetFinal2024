@@ -1,0 +1,63 @@
+/* Titre de la Page */
+h1{
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px 0px 10px 0px;
+}
+/* classe des 2 images en haut de la page */
+.WagonsCouvertHaut{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+/* Id image wagonCouvertTailleHO */
+#WagonCouvertTailleHO{
+    width: 300px;
+    height: 200px;
+}
+/* Id image wagonCouvertTailleZ*/
+#WagonCouvertTailleZ{
+    width: 470px;
+    height: 230px;
+}
+
+/* Classe WagonCouvertTailleHO */
+.WagonCouvertTailleHO{
+    padding-left: 245px;
+    padding-right: 280px;
+}
+/* Classe WagonCouvertTailleZ*/
+.WagonCouvertTailleZ{
+    padding-right: 220px;
+}
+
+
+/* classe des 3 images en Bas de la page */
+.WagonsFretBas{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-bottom: 80px;
+}
+/* Id image wagonCouvertTailleN */
+#WagonCouvertTailleN{
+    width: 300px;
+    height: 200px;
+}
+/* Id image wagonCouvertTailleG*/
+#WagonCouvertTailleG{
+    width: 600px;
+    height: 250px;
+}
+
+/* Classe WagonCouvertTailleN*/
+.WagonCouvertTailleN{
+    padding-left: 105px;
+    padding-right: 290px;
+}
+/* Classe WagonCouvertTailleG */
+.WagonCouvertTailleG{
+    padding-right: 220px;
+}
