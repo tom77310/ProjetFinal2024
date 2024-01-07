@@ -47,9 +47,9 @@
 <div class="descriptionNCouvert">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Wagon couvert de la compagnie ferroviaire SNCF, fabriquer par Trains160 avec la réference 16023 en taille N. 
-    Il est vétu d’une livrée 2 tons (brun/rouge) avec le sigle FRET SNCF en blanc sur les deux cotés du wagon. 
-    Ce wagon couvert a été mise en service par la SNCF entre 1970 jusqu’en 2004.
+   Wagon couvert de la compagnie ferroviaire SNCF, fabriquer par Trains160 avec la référence 16023 en taille N. 
+   Il est vêtu d’une livrée 2 tons (brun/rouge) avec le sigle FRET SNCF en blanc sur les deux cotés du wagon. 
+   Ce wagon couvert a été mise en service par la SNCF entre 1970 jusqu’en 2004.
     </p>
 </div>
 

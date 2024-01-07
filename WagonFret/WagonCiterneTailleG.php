@@ -29,7 +29,7 @@
 <div class="descriptionGCiterne">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Wagon-citerne exploitée par la compagnie ferroviaire americaine entre 1945 et 1970. <br>
+    Wagon-citerne exploitée par la compagnie ferroviaire américaine entre 1945 et 1970. <br>
     Ce modèle réduit à été fabriqué par LGB avec la réference 40811 en taille G.
     </p>
 </div>

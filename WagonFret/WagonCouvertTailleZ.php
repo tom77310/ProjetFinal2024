@@ -47,11 +47,10 @@
 <div class="description">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-Wagon couvert de la compagnie ferroviaire SNCF, fabriquer par AZAR MODELS avec la réference AZW02-STAX en taille Z. 
-C’est un wagon couvert avec feux de fin de convoie, la caisse du wagon est réalisée en 3D haute définition, la peinture et l’inscription sont sérigraphié pour avoir une haute résolution. 
-Il a une grande résistance, il est équiper d’essieux en métal avec finition nickel brun, son attelage du fabriquant Marklin est compatible avec l’ensemble des modèles des constructeurs europpéens. La caisse et le chassis sont en injection plastique.
-Ce wagon couvert a été mise en service par la SNCF en 1945 jusqu’en 1991.
-Ce wagon fait partis de la dernière série de wagon couvert a 2 essieux, produit en grande serie.
+   Wagon couvert de la compagnie ferroviaire SNCF, fabriquer par AZAR MODELS avec la référence AZW02-STAX en taille Z. 
+   C’est un wagon couvert avec feux de fin de convoie, la caisse du wagon est réalisée en 3D haute définition, la peinture et l’inscription sont sérigraphié pour avoir une haute résolution.
+   Il a une grande résistance, il est équiper d’essieux en métal avec finition nickel brun, son attelage du fabriquant Marklin est compatible avec l’ensemble des modèles des constructeurs européens. 
+   La caisse et le châssis sont en injection plastique. Ce wagon couvert a été mise en service par la SNCF en 1945 jusqu’en 1991. Ce wagon fait partis de la dernière série de wagon couvert a 2 essieux, produit en grande série.
     </p>
 </div>
 

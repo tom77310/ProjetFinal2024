@@ -53,7 +53,7 @@
 <div class="description">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Wagon baché exploité par la compagnie SNCF entre 1971 et 2004. <br>
+    Wagon bâché exploité par la compagnie SNCF entre 1971 et 2004. <br>
     Ce modèle réduit à été fabriqué par Marklin avec la réference 47118-03 en taille HO. <br>
     Sa longueur hors tampon est de 229mm (22.9cm).
     </p>

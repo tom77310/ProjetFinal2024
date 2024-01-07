@@ -31,7 +31,7 @@
    <span class="titre_description">Description du Produit :</span>  <br>
    Wagon couvert de la compagnie ferroviaire allemande DR, fabriquer par LGB avec la réference 43602 en taille G. 
 C’est un wagon couvert fabriqué en plastique, sa longueur est de 480 mm (48 cm), il est vendu neuf. 
-Ce wagon couvert a été mise en service par la compagnie ferrovire allemande DR entre 1945 jusqu’en 1970.
+Ce wagon couvert a été mise en service par la compagnie ferrovire allemande DR entre 1945 et 1970.
     </p>
 </div>
 

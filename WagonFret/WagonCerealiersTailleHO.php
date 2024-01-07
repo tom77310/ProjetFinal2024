@@ -29,7 +29,10 @@
     <img src="./Images/WagonFret/Wagon_cerealers/Taille HO/wagon_cerealiers_tailleHO_vue2.png" alt="WagonCerealierTailleHOvue2" id="CerealierTailleHOVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_cerealers/Taille HO/wagon_cerealiers_tailleHO_vue4.png" alt="WagonCerealierTailleHOvue3" id="CerealierTailleHOVue3">
+    <img src="./Images/WagonFret/Wagon_cerealers/Taille HO/wagon_cerealiers_tailleHO_vue3.png" alt="WagonCerealierTailleHOvue3" id="CerealierTailleHOVue3">
+    </div>
+    <div class="carousel-item">
+    <img src="./Images/WagonFret/Wagon_cerealers/Taille HO/wagon_cerealiers_tailleHO_vue4.png" alt="WagonCerealierTailleHOvue4" id="CerealierTailleHOVue4">
     </div>
   </div>
 </div>

@@ -41,7 +41,7 @@
 <div class="descriptionGCouvert">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Wagon baché fabriqué en plastique. <br>
+    Wagon bâché fabriqué en plastique. <br>
     Il mesure 486 mm (48.6cm). Il a été mis en service en 2005 et est toujours en service aujourd’hui.
     </p>
 </div>

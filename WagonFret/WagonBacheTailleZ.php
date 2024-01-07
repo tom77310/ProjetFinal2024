@@ -28,7 +28,7 @@
 <div class="descriptionZBache">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Lot de 3 Wagon bachés exploités par la compagnie ferroviaire SNCF entre 1992 et 2004. <br>
+    Lot de 3 Wagon bâchés exploités par la compagnie ferroviaire SNCF entre 1992 et 2004. <br>
     Ces wagons ont été fabriqués par Marklin avec la réference 82247 en taille Z .  <br>
     Ils font 85 mm chacun sans compter les tampons.
     </p>

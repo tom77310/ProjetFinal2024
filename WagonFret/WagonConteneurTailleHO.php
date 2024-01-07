@@ -50,8 +50,9 @@
 <div class="descriptionHOConteneur">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Wagon plat porte-conteneurs de la compagnie suisse CFF, fabriquer par Piko avec la réference 58132 en taille HO. Il a une livrée Cargo Domino et à été mise en service par la compagnie ferroviaire Suisse CFF entre 1990 et 2004.
-Sa longueur hors tampon est de 157mm (15.7cm).
+   Wagon plat porte-conteneurs de la compagnie suisse CFF, fabriquer par Piko avec la référence 58132 en taille HO. 
+   Il a une livrée Cargo Domino et à été mise en service par la compagnie ferroviaire Suisse CFF entre 1990 et 2004. 
+   Sa longueur hors tampon est de 157mm (15.7cm).
     </p>
 </div>
 

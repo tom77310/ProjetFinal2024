@@ -18,7 +18,7 @@
     <div class="materielroulant">
 
         <div class="locomotives">
-            <a href="./Locomotives"><img src="./Images/Materiel Roulant/presentations locomotives.png" alt="presentation_locoVapeur" id="Locomotives"></a>
+            <a href="./Locomotives.php"><img src="./Images/Materiel Roulant/presentations locomotives.png" alt="presentation_locoVapeur" id="Locomotives"></a>
             <p>Les Locomotives</p>
         </div>
         <div class="wagonfret">

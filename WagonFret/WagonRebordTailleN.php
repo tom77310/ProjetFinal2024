@@ -44,9 +44,9 @@
     <div class="descriptionNRebord">
         <p>
             <span class="titre_description">Description du Produit :</span> <br>
-            Lot de 2 Wagons plat a rebords, exploités par la compagnie ferroviaire autrichienne OBB entre 1971 et 1991.
-            Ces wagons ont éte fabriquer par fleishmann avec la réference 845609 en taille N.
-            Ils ont une longueur totale chacun sans les tampons de 136mm (13.6cm). Ils sont fabriquer en plastique et en métal.
+            Lot de 2 Wagons plat a rebords, exploités par la compagnie ferroviaire autrichienne OBB entre 1971 et 1991. 
+            Ces wagons ont été fabriquer par fleishmann avec la réference 845609 en taille N. Ils ont une longueur totale chacun sans les tampons de 136mm (13.6cm). 
+            Ils sont fabriquer en plastique et en métal.
         </p>
     </div>
 

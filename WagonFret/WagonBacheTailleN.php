@@ -28,7 +28,7 @@
 <div class="descriptionNBache">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Wagon baché, exploités par la compagnie ferroviaire SNCF entre 1991 et 2004. <br>
+    Wagon bâché, exploités par la compagnie ferroviaire SNCF entre 1991 et 2004. <br>
     Ces wagons ont éte fabriquer par Fleishmann avec la réference 837704 en taille N. 
     </p>
 </div>

@@ -48,7 +48,7 @@
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
     Wagon cerealier, exploité par la compagnie ferroviaire SNCF entre 1971 et 1991. <br>
-    Ces wagon été fabriqué par REE avec la réference NW312 en taille N. 
+    Ces wagons ont été fabriqués par REE avec la réference NW312 en taille N. 
     </p>
 </div>
 
