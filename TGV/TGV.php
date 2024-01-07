@@ -17,11 +17,11 @@
     <h1>Les TGV</h1>
     <div class="TGV">
         <div class="TGVHO">
-            <a href="./TGVHO.php"><img src="./Images/Le_materiel_roulant/Automotrices/TGV/Taille HO/TGV_tailleHO_vue1.png" alt="TGVHO" id="TGVHO"></a>
+            <a href="./TGVHO.php"><img src="./Images/TGV/Taille HO/TGV_tailleHO_vue1.png" alt="TGVHO" id="TGVHO"></a>
             <p>TGV Taille HO</p>
         </div>
         <div class="TGVN">
-            <a href="./TGVN.php"><img src="./Images/Le_materiel_roulant/Automotrices/TGV/Taille N/TGV_tailleN_vue1.png" alt="TGVN" id="TGVN"></a>
+            <a href="./TGVN.php"><img src="./Images/TGV/Taille N/TGV_tailleN_vue1.png" alt="TGVN" id="TGVN"></a>
             <p>TGV Taille N</p>
         </div>
     </div>

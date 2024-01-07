@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="./CSS/Header.css">
 <footer>
 <a class="hideHover" href="./Accueil_non_connecter.php">
-            <img id="logo" src="./Images/image_barre_de_nav/logo_site.png" alt="logo_site">
+            <img id="logo" src="./Images/images_footer/logo_site.png" alt="logo_site">
         </a>
     <div class="reseau">
 

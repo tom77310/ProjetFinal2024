@@ -23,10 +23,10 @@
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Le_materiel_roulant/Automotrices/TGV/Taille N/TGV_tailleN_vue1.png" alt="TGVTailleNvue1" id="TGVTailleNVue1">
+        <img src="./Images/TGV/Taille N/TGV_tailleN_vue1.png" alt="TGVTailleNvue1" id="TGVTailleNVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Le_materiel_roulant/Automotrices/TGV/Taille N/TGV_tailleN_vue2.png" alt="TGVTailleNvue2" id="TGVTailleNVue2">
+    <img src="./Images/TGV/Taille N/TGV_tailleN_vue2.png" alt="TGVTailleNvue2" id="TGVTailleNVue2">
     </div>
   </div>
 </div>

@@ -20,7 +20,7 @@
     </div>
     <!-- Carrousel -->
     <div class="AutorailsN">
-<img src="./Images/Le_materiel_roulant/Automotrices/Autorails/Taille N/autorail_tailleN_vue1.png" alt="AutorailsNvue1" id="AutorailsGvue1">
+<img src="./Images/Autorails/Taille N/autorail_tailleN_vue1.png" alt="AutorailsNvue1" id="AutorailsGvue1">
 <div class="droiteNAutorails">
     <p>Prix unitaire : 2€ <br></p>
        <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>

@@ -23,16 +23,16 @@
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Le_materiel_roulant/Automotrices/TGV/Taille HO/TGV_tailleHO_vue1.png" alt="TGVTailleHOvue1" id="TGVTailleHOVue1">
+        <img src="./Images/TGV/Taille HO/TGV_tailleHO_vue1.png" alt="TGVTailleHOvue1" id="TGVTailleHOVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Le_materiel_roulant/Automotrices/TGV/Taille HO/TGV_tailleHO_vue2.png" alt="TGVTailleHOvue2" id="TGVTailleHOVue2">
+    <img src="./Images/TGV/Taille HO/TGV_tailleHO_vue2.png" alt="TGVTailleHOvue2" id="TGVTailleHOVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Le_materiel_roulant/Automotrices/TGV/Taille HO/TGV_tailleHO_vue3.png" alt="TGVTailleHOvue3" id="TGVTailleHOVue3">
+    <img src="./Images/TGV/Taille HO/TGV_tailleHO_vue3.png" alt="TGVTailleHOvue3" id="TGVTailleHOVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Le_materiel_roulant/Automotrices/TGV/Taille HO/TGV_tailleHO_vue4.png" alt="TGVTailleHOvue4" id="TGVTailleHOVue4">
+    <img src="./Images/TGV/Taille HO/TGV_tailleHO_vue4.png" alt="TGVTailleHOvue4" id="TGVTailleHOVue4">
     </div>
   </div>
 </div>

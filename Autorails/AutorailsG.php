@@ -23,10 +23,10 @@
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Le_materiel_roulant/Automotrices/Autorails/Taille G/autorail_tailleG_vue1.png" alt="AutorailsTailleGvue1" id="AutorailsTailleGVue1">
+        <img src="./Images/Autorails/Taille G/autorail_tailleG_vue1.png" alt="AutorailsTailleGvue1" id="AutorailsTailleGVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Le_materiel_roulant/Automotrices/Autorails/Taille G/autorail_tailleG_vue2.png" alt="AutorailsTailleGvue2" id="AutorailsTailleGVue2">
+    <img src="./Images/Autorails/Taille G/autorail_tailleG_vue2.png" alt="AutorailsTailleGvue2" id="AutorailsTailleGVue2">
     </div>
   </div>
 </div>

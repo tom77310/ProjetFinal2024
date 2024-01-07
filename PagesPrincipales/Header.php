@@ -18,6 +18,7 @@
 <body>
     <!--Barre de navigation  -->
     <nav class="container1">
+
         <a class="hideHover" href="./Accueil_non_connecter.php">
             <img id="logo" src="./Images/image_barre_de_nav/logo_site.png" alt="logo_site">
         </a>
@@ -33,12 +34,14 @@
         <a class="hideHover navCat" href="./Les_Voies.php">
             <div>Les voies</div>
         </a>
+
         <a class="hideHover navCat" href="./Connexion.php">
             <div>Se connecter</div>
         </a>
         <a class="hideHover navCat" href="./Inscription.php">
             <div>S'inscrire</div>
         </a>
+
     </nav>
     <!-- Menu déroulant -->
     <nav class="container2">

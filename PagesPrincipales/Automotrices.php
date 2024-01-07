@@ -17,11 +17,11 @@
     <h1>Les Automotrices</h1>
 
         <div class="Autorails">
-            <a href="../Autorails.php"><img src="./Images/Automotrices/autorails_presentation.png" alt="presentation_Automotrice" id="Autorails"></a>
+            <a href="../Autorails/Autorails.php"><img src="./Images/Automotrices/autorails_presentation.png" alt="presentation_Automotrice" id="Autorails"></a>
             <p>Les Autorails</p>
         </div>
         <div class="TGV">
-            <a href="../TGV.php"><img src="./Images/Automotrices/TGV_presentation.png" alt="presentationTGV" id="TGV"></a>
+            <a href="../TGV/TGV.php"><img src="./Images/Automotrices/TGV_presentation.png" alt="presentationTGV" id="TGV"></a>
             <p>Les TGV</p>
         </div>
 

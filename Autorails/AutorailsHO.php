@@ -23,10 +23,10 @@
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Le_materiel_roulant/Automotrices/Autorails/Taille HO/autorail_tailleHO_vue1.png" alt="AutorailsTailleHOvue1" id="AutorailsTailleHOVue1">
+        <img src="./Images/Autorails/Taille HO/autorail_tailleHO_vue1.png" alt="AutorailsTailleHOvue1" id="AutorailsTailleHOVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Le_materiel_roulant/Automotrices/Autorails/Taille HO/autorail_tailleHO_vue2.png" alt="AutorailsTailleHOvue2" id="AutorailsTailleHOVue2">
+    <img src="./Images/Autorails/Taille HO/autorail_tailleHO_vue2.png" alt="AutorailsTailleHOvue2" id="AutorailsTailleHOVue2">
     </div>
   </div>
 </div>

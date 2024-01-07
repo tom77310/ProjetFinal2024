@@ -16,7 +16,7 @@
     ?>
     <!-- Body -->
     <div class="titre">
-        <a href="./Les_Voies.php">Retour vers les Voies</a>
+        <a href="../PagesPrincipales/Les_Voies.php">Retour vers les Voies</a>
         <h1>Wagon Voies Taille HO</h1>
     </div>
 <div class="VoiesTailleHO">
