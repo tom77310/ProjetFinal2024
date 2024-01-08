@@ -41,9 +41,9 @@
 <div class="descriptionNElec">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette locomotive éléctrique à été mise en service par la compagnie ferroiaire suisse en 2005 et elle est toujours en service actuellement.
+    Cette locomotive électrique à été mise en service par la compagnie ferroviaire suisse en 2005 et elle est toujours en service actuellement.
     Ce modèle réduit a été fabriqué en plastique et en métal par Piko avec la réference 40583. 
-    Elle fait 118mm(11.8cm)
+    Elle fait 118mm(11.8cm).
     </p>
 </div>
 

@@ -29,7 +29,7 @@
 <div class="descriptionZVoies">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Cette rails courbée est fabriquée en plastique par marklin sous la ref MA8591. 
+   Cette rails courbée est fabriquée en plastique par Marklin sous la réference MA8591. 
     </p>
 </div>
 

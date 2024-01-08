@@ -43,7 +43,7 @@
    <span class="titre_description">Description du Produit :</span>  <br>
     Voiture de voyageurs  mise en service par la compagnie ferroviaire allemande RHB  en 2005 et elle est encore utilisée aujourd’hui, 
     Ce modèle réduit à été fabriqué par LGB avec la réference 33100 en taille G.
-    La longueur totale de la voiture est de 770mm (16.7cm).
+    La longueur totale de la voiture est de 770mm (77cm).
     </p>
 </div>
 

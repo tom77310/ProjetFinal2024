@@ -29,7 +29,7 @@
 <div class="descriptionGElec">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette locomotive diesel à été utilisée  par la compagnie ferroviaire allemande RHB en 2005 et elle est toujours utilisée aujourd’hui.
+    Cette locomotive électrique à été utilisée  par la compagnie ferroviaire allemande RHB en 2005 et elle est toujours utilisée aujourd’hui.
     Ce modèle réduit a été fabriqué en plastique par LGB avec la réference 21430. 
     Elle a une longueur de 650mm (65 cm).
     </p>

@@ -29,7 +29,7 @@
 <div class="descriptionNVoies">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Cette rails courbée est fabriquée en plastique par minitrix sous la ref 14929.  
+   Cette rails courbée est fabriquée en plastique par Minitrix sous la réference 14929.  
     </p>
 </div>
 

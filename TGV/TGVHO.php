@@ -47,7 +47,7 @@
 <div class="descriptionHOTGV">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette automotrice Ouigo a été mise en service  par la compagnie ferroviaire SNCF en 2005 et elle est toujours en service aujourd’hui. <br>
+    Cette automotrice TGV Ouigo a été mise en service  par la compagnie ferroviaire SNCF en 2005 et elle est toujours en service aujourd’hui. <br>
     Ce modèle réduit a été fabriqué en plastique par le fabriquant JOUEF avec la réference 2413. 
     </p>
 </div>

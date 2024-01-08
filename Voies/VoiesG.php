@@ -29,7 +29,7 @@
 <div class="descriptionGVoies">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Ce set comprend 2 aiguillages et 2 courbes de voies G fabriquer en plastique par marklin sous la ref 23401. 
+   Ce set comprend 2 aiguillages et 2 courbes de voies G fabriqués en plastique par Marklin sous la réference 23401. 
     </p>
 </div>
 

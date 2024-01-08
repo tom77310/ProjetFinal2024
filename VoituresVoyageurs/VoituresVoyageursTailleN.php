@@ -47,7 +47,7 @@
 <div class="descriptionNVoy">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Voiture de voyageurs a étage mise en service par la compagnie ferroviaire allemande DB en 2005 et elle est encore utilisée aujourd’hui, <br>
+    Voiture de voyageurs a étage mise en service par la compagnie ferroviaire allemande DB en 2005 et elle est encore utilisée aujourd’hui. <br>
     Ce modèle réduit à été fabriqué par Fleishmann avec la réference FL862812 en taille N. <br>
     La longueur totale de la voiture est de 167mm (16.7cm).
     </p>

@@ -48,7 +48,7 @@
 <div class="descriptionNVapeur">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Cette locomotive a vapeur à été utilisée  par la compagnie Internationnale des wagons lits entre 1832 et 1925. <br>
+   Cette locomotive a vapeur à été utilisée  par la compagnie Internationale des wagons lits entre 1832 et 1925. <br>
     Ce modèle réduit a été fabriqué en plastique et en métal par Hoby66 avec la réference H4036D.  <br>
     Elle fait 144mm(14.4cm)
     </p>

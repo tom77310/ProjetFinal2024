@@ -29,7 +29,7 @@
 <div class="descriptionHOElec">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette locomotive éléctrique à été utilisée  par la compagnie ferroviaire SNCF entre 1992 et 2004. <br>
+    Cette locomotive électrique à été utilisée  par la compagnie ferroviaire SNCF entre 1992 et 2004. <br>
     Ce modèle réduit a été fabriqué en plastique par LS MODELS avec la réference 10226S.  <br>
     Il mesure environ 170mm(17cm) sans les tampons de la locomotive.
     </p>

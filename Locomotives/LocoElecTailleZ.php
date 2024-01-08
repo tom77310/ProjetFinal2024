@@ -41,7 +41,7 @@
 <div class="descriptionZElec">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette locomotive éléctrique à été utilisée  par la compagnie ferroviaire suisse CFF en 2005 et elle est toujours utilisée actuellement.
+    Cette locomotive électrique à été utilisée  par la compagnie ferroviaire suisse CFF en 2005 et elle est toujours utilisée actuellement.
     Ce modèle réduit a été fabriqué en plastique par Marklin avec la réference 88468. 
     Elle mesure 84mm (8.4cm) sans compter les tampons.
     </p>

@@ -47,7 +47,7 @@
 <div class="descriptionZVoy">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Set de 3 voiture de voyageurs de seconde classe mises en service par la compagnie ferroviaire allemande DB entre 1971 et 1991, <br>
+    Set de 3 voiture de voyageurs de seconde classe mises en service par la compagnie ferroviaire allemande DB entre 1971 et 1991. <br>
     Ce modèle réduit à été fabriqué par LS MODELS avec la réference 87402 en taille Z. <br>
     Une fois les 3 voitures attachées elles font une longueurs totale de 365mm (36.5cm) environ.
     </p>
