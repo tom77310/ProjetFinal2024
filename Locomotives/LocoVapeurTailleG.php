@@ -1,3 +1,12 @@
+<?php
+require_once("../ConnexionBDD.php");
+// session_start();
+// $ps = $BDD->prepare("SELECT images FROM produit Where id_produit = 41 LIMIT 1");
+// $ps = $BDD->prepare("SELECT detail_produit FROM produit Where id_produit = 41");
+// $ps = $BDD->prepare("SELECT * FROM produit WHERE id_produit =41 LIMIT 1");
+// $ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +32,19 @@
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
+        
+        <!-- ?php -->
+            <!-- while ($et = $ps->fetch()) { -->
+        <!-- ?> -->
+                <!-- <img src="./Images/Loco/loco vapeur/Taille G/ ?php echo $et["images"] ?>" alt="test vue1" > -->
+        <!-- ?php -->
+            <!-- } -->
+        <!-- ?> -->
+        
+        
+        
+        
+        
         <img src="./Images/Loco/loco vapeur/Taille G/loco_vapeur_tailleG_vue1.png" alt="LocoVapeurTailleGvue1" id="LocoVapeurTailleGVue1">
     </div>
     <div class="carousel-item">
@@ -44,6 +66,19 @@
 <div class="descriptionGVapeur">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
+    <!-- ?php -->
+    <!-- while ($et = $ps->fetch()) { -->
+        <!-- ?> -->
+<!-- ?php  -->
+   <!-- echo $et ["detail_produit"] -->
+   <!-- ?> -->
+
+
+        <!-- ?php -->
+    <!-- // } -->
+    
+    <!-- // ?> -->
+    
     Cette locomotive a vapeur à été utilisée  par la compagnie ferroviaire autrichienne entre 1970 et 1990. <br>
     Ce modèle réduit a été fabriqué en plastique par LGB avec la réference 27254. 
     </p>
