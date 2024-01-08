@@ -16,7 +16,7 @@
     <!-- Body -->
     <div class="formulaireconnexion">
         <h1>Formulaire de Connexion</h1>
-        <form action="../Utilisateur_connecter/test.php" method="post">
+        <form action="../Connecter/PagesPrincipales/Accueil_connecter.php" method="post">
             <div class="formulaire">
                 <div class="UserName">
 
@@ -37,7 +37,7 @@
         </form>
             </div>
     </div>
-
+<a href="../Connecter/PagesPrincipales/Accueil_connecter.php">Acceuil Connecter</a>
 
 
     <!-- footer -->

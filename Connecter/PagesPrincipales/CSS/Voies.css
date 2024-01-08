@@ -1,0 +1,44 @@
+h1{
+    text-align: center;
+    padding: 10px;
+}
+.LesVoiesHaut{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    margin-right: 435px;
+}
+.LesVoiesBas{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    margin-left: 269px;
+}
+.TailleHO{
+    margin-right: 330px;
+}
+#TailleHO{
+    width: 320px;
+    height: 220px;
+    
+}
+#TailleZ{
+    width: 400px;
+    height: 220px;
+}
+#TailleN{
+    width: 357px;
+    height: 250px;
+}
+#TailleG{
+    width: 435px;
+    height: 126px;
+}
+.TailleN{
+    margin-right: 339px;
+}

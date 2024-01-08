@@ -1,0 +1,242 @@
+/* Classe pour le titre et le texte */
+.titre{
+    display: flex;
+    flex-direction: row;
+}
+/* lien de la div classe titre */
+.titre a{
+    padding-right: 300px;
+    padding-left: 40px;
+    padding-top: 10px;
+    color: black;
+}
+
+/* Titre de la page */
+h1{
+    text-decoration: underline;
+    padding-top: 10px;
+}
+
+
+/* Page Produit Autorails */
+/* Taille HO Autorails*/
+/* Id Image AutorailsTailleHOVue1 */
+#AutorailsTailleHOVue1{
+    width: 70%;
+    height: 80%;
+}
+/* Id Image AutorailsTailleHOVue2 */
+#AutorailsTailleHOVue2{
+    width: 875px;
+    height: 250px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteHOAutorails{
+    padding-left: 50%;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteHOAutorails a{
+    color: black;
+}
+/* classe de la div pour la description du produit */
+.descriptionHOAutorails{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 100px;
+    margin: 50px auto;
+}
+/* classe de la div de la description du produit en ciblant le paragraphe */
+.descriptionHOAutorails p{
+    font-size: 24px;
+}
+
+
+
+
+/* Taille N Autorails*/
+
+/* Id Image AutorailsTailleNVue1 */
+#AutorailsTailleNVue1{
+    width: 519px;
+    height: 336px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteNAutorails{
+    padding-top: 100px;
+    padding-left: 130px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteNAutorails a{
+    color: black;
+}
+/* classe de la div pour la description du produit */
+.descriptionNAutorails{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 100px;
+    margin: 68px auto;
+}
+/* classe de la div de la description du produit en ciblant le paragraphe */
+.descriptionNAutorails p{
+    font-size: 24px;
+}
+.AutorailsN{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+/* Taille G Autorails*/
+/* Id Image AutorailsTailleGVue1 */
+#AutorailsTailleGVue1{
+    width: 55%;
+    height: 60%;
+}
+/* Id Image AutorailsTailleGVue2 */
+#AutorailsTailleGVue2{
+    width: 450px;
+    height: 265px;
+}
+
+
+.descriptionGAutorails{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 100px;
+    margin: 50px auto;
+}
+.descriptionGAutorails p{
+    font-size: 24px;
+}
+
+
+
+
+
+
+/* Page Produit TGV */
+/* Taille HO TGV*/
+/* Id Image TGVTailleHOVue1 */
+#TGVTailleHOVue1{
+    width: 290px;
+    height: 220px;
+}
+/* Id Image TGVTailleHOVue2 */
+#TGVTailleHOVue2{
+    width: 410px;
+    height: 210px;
+}
+/* Id Image TGVTailleHOVue3 */
+#TGVTailleHOVue3{
+    width: 560px;
+    height: 220px;
+}
+/* Id Image TGVTailleHOVue4 */
+#TGVTailleHOVue4{
+    width: 560px;
+    height: 220px;
+}
+
+.descriptionHOTGV{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 60%;
+    height: 110px;
+    margin: 50px auto;
+}
+.descriptionHOTGV p{
+    font-size: 24px;
+}
+/* Classe pour le titre et le texte */
+.titreHOTGV{
+    display: flex;
+    flex-direction: row;
+}
+/* lien de la div classe titre */
+.titreHOTGV a{
+    padding-right: 30%;
+    padding-left: 40px;
+    padding-top: 10px;
+    color: black;
+}
+
+
+
+
+/* Taille N Locomotive TGV*/
+
+/* Id Image TGVTailleNVue1 */
+#TGVTailleNVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image TGVTailleNVue2 */
+#TGVTailleNVue2{
+    width: 540px;
+    height: 300px;
+}
+
+.descriptionNTGV{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 120px;
+    margin: 50px auto;
+}
+.descriptionNTGV p{
+    font-size: 24px;
+}
+/* Classe pour le titre et le texte */
+.titreNTGV{
+    display: flex;
+    flex-direction: row;
+}
+/* lien de la div classe titre */
+.titreNTGV a{
+    padding-right: 30%;
+    padding-left: 40px;
+    padding-top: 10px;
+    color: black;
+}
+
+
+/* CSS Generale a toutes les pages produits */
+
+/* Lien de la classe droite */
+.droite a{
+    color: black;
+}
+/* classe droite */
+.droite{
+    padding-left: 50%;
+    font-size: 24px;
+}
+/* classe description */
+.description{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 100px;
+    margin: 50px auto;
+}
+/* paragraphe de la classe description */
+.description p{
+    font-size: 24px;
+}
+/* titre de la description */
+.titre_description{
+    text-decoration: underline;
+}

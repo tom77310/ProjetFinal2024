@@ -1,0 +1,989 @@
+/* Classe pour le titre et le texte */
+.titre{
+    display: flex;
+    flex-direction: row;
+}
+/* lien de la div classe titre */
+.titre a{
+    padding-right: 300px;
+    padding-left: 40px;
+    padding-top: 10px;
+    color: black;
+}
+
+/* Titre de la page */
+h1{
+    text-decoration: underline;
+    padding-top: 10px;
+}
+
+/* Page Produit Wagon Couvert */
+/* Taille HO */
+/* Id Image CouvertTailleHOVue1 */
+#CouvertTailleHOVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CouvertTailleHOVue2 */
+#CouvertTailleHOVue2{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CouvertTailleHOVue3 */
+#CouvertTailleHOVue3{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CouvertTailleHOVue4 */
+#CouvertTailleHOVue4{
+    width: 519px;
+    height: 336px;
+}
+
+/* Taille Z */
+
+/* Id Image CouvertTailleZVue1 */
+#CouvertTailleZVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CouvertTailleZVue2 */
+#CouvertTailleZVue2{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CouvertTailleZVue3 */
+#CouvertTailleZVue3{
+    width: 670px;
+    height: 320px;
+}
+/* Id Image CouvertTailleZVue4 */
+#CouvertTailleZVue4{
+    width: 519px;
+    height: 336px;
+}
+
+/* Taille N */
+
+/* Id Image CouvertTailleNVue1 */
+#CouvertTailleNVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CouvertTailleNVue2 */
+#CouvertTailleNVue2{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CouvertTailleNVue3 */
+#CouvertTailleNVue3{
+    width: 670px;
+    height: 320px;
+}
+/* Id Image CouvertTailleNVue4 */
+#CouvertTailleNVue4{
+    width: 519px;
+    height: 336px;
+}
+.descriptionNCouvert{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 120px;
+    margin: 50px auto;
+}
+.descriptionNCouvert p{
+    font-size: 24px;
+}
+
+/* Taille G */
+/* Id Image CouvertTailleGVue1 */
+#CouvertTailleGVue1{
+    width: 720px;
+    height: 300px;
+}
+/* Id Image CouvertTailleGVue2 */
+#CouvertTailleGVue2{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CouvertTailleGVue3 */
+#CouvertTailleGVue3{
+    width: 670px;
+    height: 320px;
+}
+
+.descriptionGCouvert{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 100px;
+    margin: 50px auto;
+}
+.descriptionGCouvert p{
+    font-size: 24px;
+}
+
+
+/* Page Produit Wagon Conteneur */
+/* Taille HO */
+/* Id Image ConteneurTailleHOVue1 */
+#ConteneurTailleHOVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConteneurTailleHOVue2 */
+#ConteneurTailleHOVue2{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConteneurTailleHOVue3 */
+#ConteneurTailleHOVue3{
+    width: 600px;
+    height: 340px;
+}
+/* Id Image ConteneurTailleHOVue4 */
+#ConteneurTailleHOVue4{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConteneurTailleHOVue5 */
+#ConteneurTailleHOVue5{
+    width: 519px;
+    height: 336px;
+}
+.descriptionHOConteneur{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 120px;
+    margin: 50px auto;
+}
+.descriptionHOConteneur p{
+    font-size: 24px;
+}
+
+
+/* Taille Z */
+
+/* Id Image ConteneurTailleZVue1 */
+#ConteneurTailleZVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConteneurTailleZVue2 */
+#ConteneurTailleZVue2{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConteneurTailleZVue3 */
+#ConteneurTailleZVue3{
+    width: 670px;
+    height: 320px;
+}
+/* Id Image ConteneurTailleZVue4 */
+#ConteneurTailleZVue4{
+    width: 519px;
+    height: 336px;
+}
+.descriptionZConteneur{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 170px;
+    margin: 50px auto;
+}
+.descriptionZConteneur p{
+    font-size: 24px;
+}
+/* Taille N */
+
+/* Id Image ConteneurTailleNVue1 */
+#ConteneurTailleNVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConteneurTailleNVue2 */
+#ConteneurTailleNVue2{
+    width: 540px;
+    height: 300px;
+}
+/* Id Image ConteneurTailleNVue3 */
+#ConteneurTailleNVue3{
+    width: 670px;
+    height: 320px;
+}
+/* Id Image ConteneurTailleNVue4 */
+#ConteneurTailleNVue4{
+    width: 519px;
+    height: 336px;
+}
+.descriptionNConteneur{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 120px;
+    margin: 50px auto;
+}
+.descriptionNConteneur p{
+    font-size: 24px;
+}
+
+/* Taille G */
+/* Id Image ConteneurTailleGVue1 */
+#ConteneurTailleGVue1{
+    width: 720px;
+    height: 300px;
+}
+/* Id Image ConteneurTailleGVue2 */
+#ConteneurTailleGVue2{
+    width: 700px;
+    height: 300px;
+}
+
+
+.descriptionGConteneur{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 170px;
+    margin: 50px auto;
+}
+.descriptionGConteneur p{
+    font-size: 24px;
+}
+
+/* Page Produit Wagon Rebords */
+/* Taille HO Plat a Rebords */
+/* Id Image RebordTailleHOVue1 */
+#RebordTailleHOVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConteneurTailleHOVue2 */
+#RebordTailleHOVue2{
+    width: 519px;
+    height: 300px;
+}
+/* Id Image RebordTailleHOVue3 */
+#RebordTailleHOVue3{
+    width: 790px;
+    height: 270px;
+}
+/* Id Image ConteneurTailleHOVue4 */
+#RebordTailleHOVue4{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConteneurTailleHOVue5 */
+#RebordTailleHOVue5{
+    width: 519px;
+    height: 336px;
+}
+.descriptionHORebord{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 65%;
+    height: 150px;
+    margin: 50px auto;
+}
+.descriptionHORebord p{
+    font-size: 24px;
+}
+
+
+/* Taille Z Plat a Rebords */
+
+/* Id Image RebordTailleZVue1 */
+#RebordTailleZVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image RebordTailleZVue2 */
+#RebordTailleZVue2{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image RebordTailleZVue3 */
+#RebordTailleZVue3{
+    width: 670px;
+    height: 320px;
+}
+/* Id Image RebordTailleZVue4 */
+#RebordTailleZVue4{
+    width: 519px;
+    height: 336px;
+}
+.descriptionZRebord{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 64%;
+    height: 135px;
+    margin: 50px auto;
+}
+.descriptionZRebord p{
+    font-size: 24px;
+}
+/* Taille N Plat a Rebords */
+
+/* Id Image RebordTailleNVue1 */
+#RebordTailleNVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image RebordTailleNVue2 */
+#RebordTailleNVue2{
+    width: 850px;
+    height: 250px;
+}
+/* Id Image RebordTailleNVue3 */
+#RebordTailleNVue3{
+    width: 670px;
+    height: 320px;
+}
+/* Id Image RebordTailleNVue4 */
+#RebordTailleNVue4{
+    width: 519px;
+    height: 336px;
+}
+.descriptionNRebord{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 70%;
+    height: 130px;
+    margin: 50px auto;
+}
+.descriptionNRebord p{
+    font-size: 24px;
+}
+
+/* Taille G Plat a Rebords */
+
+.WagonRebordTailleG{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Id Image RebordTailleGVue1 */
+#RebordTailleGVue1{
+    width: 675px;
+    height: 300px;
+    padding-left: 25px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteGRebord{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteGRebord a{
+    color: black;
+}
+/* classe de la div pour la description du produit */
+.descriptionGRebord{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 75%;
+    height: 135px;
+    margin: 50px auto;
+}
+/* classe de la div de la description du produit en ciblant le paragraphe */
+.descriptionGRebord p{
+    font-size: 24px;
+}
+
+/* Page Produit Wagon Citerne */
+/* Taille HO Citerne */
+/* Id Image CiterneTailleHOVue1 */
+#CiterneTailleHOVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConCiterneTailleHOVue2 */
+#CiterneTailleHOVue2{
+    width: 519px;
+    height: 300px;
+}
+/* Id Image CiterneTailleHOVue3 */
+#CiterneTailleHOVue3{
+    width: 790px;
+    height: 270px;
+}
+/* Id Image ConCiterneTailleHOVue4 */
+#CiterneTailleHOVue4{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConCiterneTailleHOVue5 */
+#CiterneTailleHOVue5{
+    width: 519px;
+    height: 336px;
+}
+.descriptionHOCiterne{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 70%;
+    height: 120px;
+    margin: 50px auto;
+}
+.descriptionHOCiterne p{
+    font-size: 24px;
+}
+.titreHOCiterne{
+    display: flex;
+    flex-direction: row;
+}
+.titreHOCiterne a{
+    color: black;
+    padding-right: 370px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+/* Taille Z Citerne */
+
+/* Id Image CiterneTailleZVue1 */
+#CiterneTailleZVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CiterneTailleZVue2 */
+#CiterneTailleZVue2{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CiterneTailleZVue3 */
+#CiterneTailleZVue3{
+    width: 670px;
+    height: 320px;
+}
+/* Id Image CiterneTailleZVue4 */
+#CiterneTailleZVue4{
+    width: 519px;
+    height: 336px;
+}
+.descriptionZCiterne{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 64%;
+    height: 100px;
+    margin: 50px auto;
+}
+.descriptionZCiterne p{
+    font-size: 24px;
+}
+
+.titreZCiterne{
+    display: flex;
+    flex-direction: row;
+
+}
+.titreZCiterne a{
+    color: black;
+    padding-right: 320px;
+    padding-left: 21px;
+    padding-top: 10px;
+}
+
+
+/* Taille N Citerne */
+
+/* Id Image CiterneTailleNVue1 */
+#CiterneTailleNVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image CiterneTailleNVue2 */
+#CiterneTailleNVue2{
+    width: 590px;
+    height: 410px;
+}
+/* Id Image CiterneTailleNVue3 */
+#CiterneTailleNVue3{
+    width: 820px;
+    height: 285px;
+}
+/* Id Image CiterneTailleNVue4 */
+#CiterneTailleNVue4{
+    width: 519px;
+    height: 336px;
+}
+.descriptionNCiterne{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 70%;
+    height: 130px;
+    margin: 50px auto;
+}
+.descriptionNCiterne p{
+    font-size: 24px;
+}
+
+.titreNCiterne{
+    display: flex;
+    flex-direction: row;
+
+}
+.titreNCiterne a{
+    color: black;
+    padding-right: 320px;
+    padding-left: 21px;
+    padding-top: 10px;
+}
+
+
+
+
+/* Taille G Citerne */
+
+.WagonCiterneTailleG{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Id Image CiterneTailleGVue1 */
+#CiterneTailleGVue1{
+    width: 675px;
+    height: 300px;
+    padding-left: 25px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteGCiterne{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteGCiterne a{
+    color: black;
+}
+/* classe de la div pour la description du produit */
+.descriptionGCiterne{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 55%;
+    height: 100px;
+    margin: 50px auto;
+}
+/* classe de la div de la description du produit en ciblant le paragraphe */
+.descriptionGCiterne p{
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+/* Page Produit Wagon Bachés */
+/* Taille HO Bachés */
+/* Id Image BacheTailleHOVue1 */
+#BacheTailleHOVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image BacheTailleHOVue2 */
+#BacheTailleHOVue2{
+    width: 540px;
+    height: 220px;
+}
+/* Id Image BacheTailleHOVue3 */
+#BacheTailleHOVue3{
+    width: 790px;
+    height: 270px;
+}
+/* Id Image BacheTailleHOVue4 */
+#BacheTailleHOVue4{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image ConBacheTailleHOVue5 */
+#BacheTailleHOVue5{
+    width: 519px;
+    height: 336px;
+}
+.descriptionHOBache{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 70%;
+    height: 120px;
+    margin: 50px auto;
+}
+.descriptionHOBache p{
+    font-size: 24px;
+}
+.titreHOBache{
+    display: flex;
+    flex-direction: row;
+}
+.titreHOBache a{
+    color: black;
+    padding-right: 370px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+/* Taille Z Baches */
+
+/* Id Image BacheTailleZVue1 */
+#BacheTailleZVue1{
+    width: 519px;
+    height: 336px;
+}
+.descriptionZBache{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 60%;
+    height: 120px;
+    margin: 50px auto;
+}
+.descriptionZBache p{
+    font-size: 24px;
+}
+
+.titreZBache{
+    display: flex;
+    flex-direction: row;
+
+}
+.titreZBache a{
+    color: black;
+    padding-right: 320px;
+    padding-left: 21px;
+    padding-top: 10px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteZBache{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+
+}
+/* classe pour le lien */
+.droiteZBache a{
+    color: black;
+}
+.WagonBacheTailleZ{
+    display: flex;
+    flex-direction: row;
+}
+/* Taille N Bache */
+
+/* Id Image BacheTailleNVue1 */
+#BacheTailleNVue1{
+    width: 519px;
+    height: 225px;
+}
+.descriptionNBache{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 70%;
+    height: 130px;
+    margin: 50px auto;
+}
+.descriptionNBache p{
+    font-size: 24px;
+}
+
+.titreNBache{
+    display: flex;
+    flex-direction: row;
+
+}
+.titreNBache a{
+    color: black;
+    padding-right: 320px;
+    padding-left: 21px;
+    padding-top: 10px;
+}
+.WagonBacheTailleN{
+    display: flex;
+    flex-direction: row;
+}
+/* classe de la div pour l'image et le texte */
+.droiteNBache{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteNBache a{
+    color: black;
+}
+
+
+
+/* Taille G Bache */
+
+.WagonBacheTailleG{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Id Image BacheTailleGVue1 */
+#BacheTailleGVue1{
+    width: 670px;
+    height: 230px;
+    padding-left: 25px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteGBache{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteGBache a{
+    color: black;
+}
+/* classe de la div pour la description du produit */
+.descriptionGBache{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 55%;
+    height: 100px;
+    margin: 50px auto;
+}
+/* classe de la div de la description du produit en ciblant le paragraphe */
+.descriptionGBache p{
+    font-size: 24px;
+}
+
+
+/* Page Produit Wagon Cerealier */
+/* Taille HO Cerealier */
+/* Id Image CerealierTailleHOVue1 */
+#CerealierTailleHOVue1{
+    width: 519px;
+    height: 336px;
+}
+/* Id Image BacheTailleHOVue2 */
+#CerealierTailleHOVue2{
+    width: 540px;
+    height: 220px;
+}
+/* Id Image CerealierTailleHOVue3 */
+#CerealierTailleHOVue3{
+    width: 350px;
+    height: 243px;
+}
+/* Id Image CerealierTailleHOVue4 */
+#CerealierTailleHOVue4{
+    width: 519px;
+    height: 336px;
+}
+.descriptionHOCerealier{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 70%;
+    height: 120px;
+    margin: 50px auto;
+}
+.descriptionHOCerealier p{
+    font-size: 24px;
+}
+.titreHOCerealier{
+    display: flex;
+    flex-direction: row;
+}
+.titreHOCerealier a{
+    color: black;
+    padding-right: 370px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+/* Taille Z BCerealier */
+
+/* Id Image CerealierTailleZVue1 */
+#CerealierTailleZVue1{
+    width: 519px;
+    height: 336px;
+}
+.descriptionZCerealier{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 60%;
+    height: 120px;
+    margin: 50px auto;
+}
+.descriptionZCerealier p{
+    font-size: 24px;
+}
+
+.titreZCerealier{
+    display: flex;
+    flex-direction: row;
+
+}
+.titreZCerealier a{
+    color: black;
+    padding-right: 320px;
+    padding-left: 21px;
+    padding-top: 10px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteZCerealier{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+
+}
+/* classe pour le lien */
+.droiteZCerealier a{
+    color: black;
+}
+.WagonCerealierTailleZ{
+    display: flex;
+    flex-direction: row;
+}
+/* Taille N Cerealier */
+
+/* Id Image CerealierTailleNVue1 */
+#CerealierTailleNVue1{
+    width: 519px;
+    height: 225px;
+}
+/* Id Image CerealierTailleNVue2 */
+#CerealierTailleNVue2{
+    width: 519px;
+    height: 225px;
+}
+/* Id Image CerealierTailleNVue3 */
+#CerealierTailleNVue3{
+    width: 519px;
+    height: 225px;
+}
+/* Id Image CerealierTailleNVue4 */
+#CerealierTailleNVue4{
+    width: 519px;
+    height: 225px;
+}
+.descriptionNCerealier{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 55%;
+    height: 100px;
+    margin: 50px auto;
+}
+.descriptionNCerealier p{
+    font-size: 24px;
+}
+
+.titreNCerealier{
+    display: flex;
+    flex-direction: row;
+
+}
+.titreNCerealier a{
+    color: black;
+    padding-right: 320px;
+    padding-left: 21px;
+    padding-top: 10px;
+}
+.WagonCerealierTailleN{
+    display: flex;
+    flex-direction: row;
+}
+/* classe de la div pour l'image et le texte */
+.droiteNCerealier{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteNCerealier a{
+    color: black;
+}
+
+
+
+/* Taille G Cerealier */
+
+.WagonCerealierTailleG{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Id Image CerealierTailleGVue1 */
+#CerealierTailleGVue1{
+    width: 670px;
+    height: 230px;
+    padding-left: 25px;
+}
+/* classe de la div pour l'image et le texte */
+.droiteGCerealier{
+    padding-top: 106px;
+    padding-left: 106px;
+    font-size: 24px;
+}
+/* classe pour le lien */
+.droiteGCerealier a{
+    color: black;
+}
+/* classe de la div pour la description du produit */
+.descriptionGCerealier{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 75%;
+    height: 95px;
+    margin: 50px auto;
+}
+/* classe de la div de la description du produit en ciblant le paragraphe */
+.descriptionGCerealier p{
+    font-size: 24px;
+}
+/* Lien de la classe droite */
+.droite a{
+    color: black;
+}
+/* classe droite */
+.droite{
+    padding-left: 50%;
+    font-size: 24px;
+}
+/* classe description */
+.description{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 55%;
+    height: 135px;
+    margin: 50px auto;
+}
+/* paragraphe de la classe description */
+.description p{
+    font-size: 24px;
+}
+/* titre de la description */
+.titre_description{
+    text-decoration: underline;
+}
