@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 28");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +27,22 @@
         <h1> Wagon Citerne Taille N</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_citernes/Taille N/Wagon_citerne_tailleN_vue1.png" alt="WagonCiterneTailleNvue1" id="CiterneTailleNVue1">
+<img src="./Images/Citerne/TailleN/<?php echo $et["Vue1"] ?>" alt="CiterneTailleNVue1" id="CiterneTailleNVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_citernes/Taille N/Wagon_citerne_tailleN_vue2.png" alt="WagonCiterneTailleNvue2" id="CiterneTailleNVue2">
+<img src="./Images/Citerne/TailleN/<?php echo $et["Vue2"] ?>" alt="CiterneTailleNVue2" id="CiterneTailleNVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_citernes/Taille N/Wagon_citerne_tailleN_vue3.png" alt="WagonCiterneTailleNvue3" id="CiterneTailleNVue3">
+<img src="./Images/Citerne/TailleN/<?php echo $et["Vue3"] ?>" alt="CiterneTailleNVue3" id="CiterneTailleNVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_citernes/Taille N/Wagon_citerne_tailleN_vue4.png" alt="WagonCiterneTailleNvue4" id="CiterneTailleNVue4">
+<img src="./Images/Citerne/TailleN/<?php echo $et["Vue4"] ?>" alt="CiterneTailleNVue4" id="CiterneTailleNVue4">
     </div>
   </div>
 </div>
@@ -41,15 +51,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 50€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionNCiterne">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Wagon citerne, exploités par la compagnie ferroviaire autrichienne OBB entre 1971 et 1991. <br>
-    Ce wagon à été fabriqué par Liliput avec la réference 265995 en taille N. 
-    Il a été fabriqué en plastique.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

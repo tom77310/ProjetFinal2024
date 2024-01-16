@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 9");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,16 +27,19 @@
         <h1>Wagon de Fret Couvert Taille G</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_couvert/page_produit_g/image_wagon_de_fret_couvert_taille_g_vue1.png" alt="WagonCouvertTailleGvue1" id="CouvertTailleGVue1">
+<img src="./Images/Couvert/TailleG/<?php echo $et["Vue1"] ?>" alt="CouvertTailleGVue1" id="CouvertTailleGVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_g/image_wagon_de_fret_couvert_taille_g_vue2.png" alt="WagonCouvertTailleGvue2" id="CouvertTailleGVue2">
+<img src="./Images/Couvert/TailleG/<?php echo $et["Vue2"] ?>" alt="CouvertTailleGVue2" id="CouvertTailleGVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_g/image_wagon_de_fret_couvert_taille_g.png" alt="WagonCouvertTailleGvue3" id="CouvertTailleGVue3">
+    <img src="./Images/Couvert/TailleG/<?php echo $et["Vue3"] ?>" alt="CouvertTailleGVue3" id="CouvertTailleGVue3">
     </div>
    </div>
 </div>
@@ -38,22 +48,20 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 50€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionGCouvert">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Wagon couvert de la compagnie ferroviaire allemande DR, fabriquer par LGB avec la référence 43602 en taille G. 
-   C’est un wagon couvert fabriqué en plastique, sa longueur est de 480 mm (48 cm), il est vendu neuf.
-   Ce wagon couvert a été mise en service par la compagnie ferrovire allemande DR entre 1945 jusqu’en 1970.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
-
-
-
-
-
     <!-- footer -->
     <?php
     require_once("./Footer.php");

@@ -1,3 +1,11 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 32");
+$ps->execute();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,19 +26,25 @@
         <a href="./Autorails.php">Retour vers les Autorails</a>
         <h1>Autorail Taille N</h1>
     </div>
-    <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
     <div class="AutorailsN">
-<img src="./Images/Autorails/Taille N/autorail_tailleN_vue1.png" alt="AutorailsNvue1" id="AutorailsGvue1">
+    <img src="./Images/Autorails/TailleN/<?php echo $et["Vue1"] ?>" alt="AutorailsTailleGVue1" id="AutorailsTailleNVue1">
 <div class="droiteNAutorails">
-    <p>Prix unitaire : 2€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 </div>
 <div class="descriptionNAutorails">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cet autorail  a été mises en service  par la compagnie ferroviaire SNCF entre 1945 et 1970. <br>
-    Ce modèle réduit a été fabriqué par TRAIN160 avec la réference 16065. 
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -41,3 +55,8 @@
 </body>
 
 </html>
+
+
+
+
+

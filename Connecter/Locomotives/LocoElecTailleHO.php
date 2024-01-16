@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 38");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,19 +25,25 @@
         <a href="./LocoElec.php">Retour vers les Locomotives Electrique</a>
         <h1>Locomotive Electrique Taille HO</h1>
     </div>
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div class="LocoElecTailleHO">
-<img src="./Images/Loco/loco elec/Taille HO/Loco_elec-tailleHO_vues1.png" alt="LocoElecTailleHOvue1" id="LocoElecTailleHOVue1">
+<img src="./Images/Loco/Elec/TailleHO/<?php echo $et["Vue1"] ?>" alt="LocoElecTailleHOVue1" id="LocoElecTailleHOVue1">
 <div class="droiteHOElec">
-    <p>Prix unitaire : 440€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 </div>
 <div class="descriptionHOElec">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette locomotive électrique à été utilisée  par la compagnie ferroviaire SNCF entre 1992 et 2004. <br>
-    Ce modèle réduit a été fabriqué en plastique par LS MODELS avec la réference 10226S.  <br>
-    Il mesure environ 170mm(17cm) sans les tampons de la locomotive.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

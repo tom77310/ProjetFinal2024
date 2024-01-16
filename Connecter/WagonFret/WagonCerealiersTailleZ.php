@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 25");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,16 +26,19 @@
         <h1>Lot de 3 Wagons Cerealier Taille Z</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_cerealers/Taille Z/wagon_cerealier_tailleZ_vue1.png" alt="WagonCerealierTailleZvue1" id="CerealierTailleZVue1">
+    <img src="./Images/Cerealiers/TailleZ/<?php echo $et["Vue1"] ?>" alt="CerealierTailleZVue1" id="CerealierTailleZVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_cerealers/Taille Z/wagon_cerealier_tailleZ_vue2.png" alt="WagonCerealierTailleZvue2" id="CerealierTailleZVue2">
+    <img src="./Images/Cerealiers/TailleZ/<?php echo $et["Vue2"] ?>" alt="CerealierTailleZVue2" id="CerealierTailleZVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_cerealers/Taille Z/wagon_cerealier_tailleZ_vue3.png" alt="WagonCerealierTailleZvue3" id="CerealierTailleZVue3">
+    <img src="./Images/Cerealiers/TailleZ/<?php echo $et["Vue3"] ?>" alt="CerealierTailleZVue3" id="CerealierTailleZVue3">
     </div>
   </div>
 </div>
@@ -38,14 +47,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 50€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionZCerealier">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Wagon exploité par la compagnie ferroviaire SNCF entre 1971 et 2004. <br>
-   Il a été fabriqué par azar modèle.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

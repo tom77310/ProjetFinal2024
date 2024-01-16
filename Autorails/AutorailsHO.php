@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 31");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,17 +23,20 @@
     ?>
     <!-- Body -->
     <div class="titre">
-        <a href="./Autorails.php">Retour vers les Automotrices</a>
+        <a href="./Autorails.php">Retour vers les Autorails</a>
         <h1>Autorail Taille HO</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Autorails/Taille HO/autorail_tailleHO_vue1.png" alt="AutorailsTailleHOvue1" id="AutorailsTailleHOVue1">
+<img src="./Images/Autorails/TailleHO/<?php echo $et["Vue1"] ?>" alt="AutorailsTailleHOVue1" id="AutorailsTailleHOVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Autorails/Taille HO/autorail_tailleHO_vue2.png" alt="AutorailsTailleHOvue2" id="AutorailsTailleHOVue2">
+<img src="./Images/Autorails/TailleHO/<?php echo $et["Vue2"] ?>" alt="AutorailsTailleHOVue2" id="AutorailsTailleHOVue2">
     </div>
   </div>
 </div>
@@ -35,14 +45,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 330€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionHOAutorails">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cet autorail a été mise en service  par la compagnie ferroviaire SNCF en 2005 et il est toujours en service aujourd’hui.
-    Ce modèle réduit a été fabriqué en plastique Piko avec la réference 96531. 
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -54,3 +68,9 @@
 </body>
 <script src="./js/Carrousel.js"></script>
 </html>
+
+
+
+
+
+

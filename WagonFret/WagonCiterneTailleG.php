@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 26");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,18 +25,25 @@
         <a href="./WagonCiterne.php">Retour vers les Wagons Citernes</a>
         <h1>Wagon Citerne Taille G</h1>
     </div>
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div class="WagonCiterneTailleG">
-<img src="./Images/WagonFret/Wagon_citernes/Taille G/wagon_citerne_tailleG_vue1.png" alt="WagonCiterneTailleGvue1" id="CiterneTailleGVue1">
+<img src="./Images/Citerne/TailleG/<?php echo $et["Vue1"] ?>" alt="CiterneTailleGVue1" id="CiterneTailleGVue1">
 <div class="droiteGCiterne">
-    <p>Prix unitaire : 70€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 </div>
 <div class="descriptionGCiterne">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Wagon-citerne exploitée par la compagnie ferroviaire américaine entre 1945 et 1970. <br>
-    Ce modèle réduit à été fabriqué par LGB avec la réference 40811 en taille G.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 10");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,22 +26,25 @@
         <h1>Wagon de Fret Plat Porte Conteneur Taille HO</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_HO/wagon_porte_containeur_taille_HO_vue1.png" alt="WagonConteneurTailleHOvue1" id="ConteneurTailleHOVue1">
+<img src="./Images/Conteneur/TailleHO/<?php echo $et["Vue1"] ?>" alt="ConteneurTailleHOVue1" id="ConteneurTailleHOVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_HO/wagon_porte_containeur_taille_HO_vue2.png" alt="WagonConteneurTailleHOvue2" id="ConteneurTailleHOVue2">
+    <img src="./Images/Conteneur/TailleHO/<?php echo $et["Vue2"] ?>" alt="ConteneurTailleHOVue2" id="ConteneurTailleHOVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_HO/wagon_porte_containeur_taille_HO_vue3.png" alt="WagonConteneurTailleHOvue3" id="ConteneurTailleHOVue3">
+<img src="./Images/Conteneur/TailleHO/<?php echo $et["Vue3"] ?>" alt="ConteneurTailleHOVue3" id="ConteneurTailleHOVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_HO/wagon_porte_containeur_taille_HO_vue4.png" alt="WagonConteneurTailleHOvue4" id="ConteneurTailleHOVue4">
+<img src="./Images/Conteneur/TailleHO/<?php echo $et["Vue4"] ?>" alt="ConteneurTailleHOVue4" id="ConteneurTailleHOVue4">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_HO/wagon_porte_containeur_taille_HO_vue5.png" alt="WagonConteneurTailleHOvue5" id="ConteneurTailleHOVue5">
+<img src="./Images/Conteneur/TailleHO/<?php echo $et["Vue5"] ?>" alt="ConteneurTailleHOVue5" id="ConteneurTailleHOVue5">
     </div>
   </div>
 </div>
@@ -44,19 +53,20 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 45€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionHOConteneur">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Wagon plat porte-conteneurs de la compagnie suisse CFF, fabriquer par Piko avec la référence 58132 en taille HO. 
-   Il a une livrée Cargo Domino et à été mise en service par la compagnie ferroviaire Suisse CFF entre 1990 et 2004. 
-   Sa longueur hors tampon est de 157mm (15.7cm).
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
-
-
     <!-- footer -->
     <?php
     require_once("./Footer.php");

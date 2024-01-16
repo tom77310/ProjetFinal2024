@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 24");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +27,24 @@
         <h1> Wagon Cerealier Taille N</h1>
     </div>
     <!-- Carrousel -->
-<div id="carousel-container">
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
+
+
+    <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_cerealers/Taille N/wagon_cerealier_tailleN_vue1.png" alt="WagonCerealierTailleNvue1" id="CerealierTailleNVue1">
+    <img src="./Images/Cerealiers/TailleN/<?php echo $et["Vue1"] ?>" alt="CerealierTailleNVue1" id="CerealierTailleNVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_cerealers/Taille N/wagon_cerealier_tailleN_vue2.png" alt="WagonCerealierTailleNvue2" id="CerealierTailleNVue2">
+    <img src="./Images/Cerealiers/TailleN/<?php echo $et["Vue2"] ?>" alt="CerealierTailleNVue2" id="CerealierTailleNVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_cerealers/Taille N/wagon_cerealier_tailleN_vue3.png" alt="WagonCerealierTailleNvue3" id="CerealierTailleNVue3">
+    <img src="./Images/Cerealiers/TailleN/<?php echo $et["Vue3"] ?>" alt="CerealierTailleNVue3" id="CerealierTailleNVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_cerealers/Taille N/wagon_cerealier_tailleN_vue4.png" alt="WagonCerealierTailleNvue4" id="CerealierTailleNVue4">
+    <img src="./Images/Cerealiers/TailleN/<?php echo $et["Vue4"] ?>" alt="CerealierTailleNVue4" id="CerealierTailleNVue4">
     </div>
   </div>
 </div>
@@ -41,14 +53,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 40€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionNCerealier">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Wagon cerealier, exploité par la compagnie ferroviaire SNCF entre 1971 et 1991. <br>
-    Ces wagons ont été fabriqués par REE avec la réference NW312 en taille N. 
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

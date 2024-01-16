@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 11");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +26,22 @@
         <h1>Lot de 2 Wagons de Fret Plat Porte Conteneur Taille Z</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_z/wagon_porte_containeur_taille_Z_vue1.png" alt="WagonConteneurTailleZvue1" id="ConteneurTailleZVue1">
+<img src="./Images/Conteneur/TailleZ/<?php echo $et["Vue1"] ?>" alt="ConteneurTailleZVue1" id="ConteneurTailleZVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_z/wagon_porte_containeur_taille_Z_vue2.png" alt="WagonConteneurTailleZvue2" id="ConteneurTailleZVue2">
+    <img src="./Images/Conteneur/TailleZ/<?php echo $et["Vue2"] ?>" alt="ConteneurTailleZVue2" id="ConteneurTailleZVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_z/wagon_porte_containeur_taille_Z_vue3.png" alt="WagonConteneurTailleZvue3" id="ConteneurTailleZVue3">
+<img src="./Images/Conteneur/TailleZ/<?php echo $et["Vue3"] ?>" alt="ConteneurTailleZVue3" id="ConteneurTailleZVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_z/wagon_porte_containeur_taille_Z_vue4.png" alt="WagonConteneurTailleZvue4" id="ConteneurTailleZVue4">
+<img src="./Images/Conteneur/TailleZ/<?php echo $et["Vue4"] ?>" alt="ConteneurTailleZVue4" id="ConteneurTaillZNVue4">
     </div>
   </div>
 </div>
@@ -41,22 +50,20 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 50€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionZConteneur">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Lot de 2 Wagon plat porte-conteneur de la compagnie ferroviaire allemande DB, fabriquer par Marklin avec la réference 82273 en taille Z . Ils font 156 mm chacun sans comptés les tampons.
-Ils sont utilisés dans le système de transport combiné, où les conteneurs sont transportés à la fois par train et par camion.
-Ces wagon porte-conteneur a été mise en service par la DB en 2005 et ils sont toujours en services aujourd’hui.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
-
-
-
-
-
     <!-- footer -->
     <?php
     require_once("./Footer.php");

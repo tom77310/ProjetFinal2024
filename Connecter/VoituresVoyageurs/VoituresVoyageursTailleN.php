@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 55");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +27,22 @@
         <h1>Voiture de Voyageurs Taille N</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Voiture_voyageurs/Taille N/voiture_voyageurs_tailleN_vue1.png" alt="VoituresVoyageursTailleNvue1" id="VoituresVoyageursTailleNVue1">
+    <img src="./Images/VoitureVoyageurs/TailleN/<?php echo $et["Vue1"] ?>" alt="VoitureVoyageursTailleNVue1" id="VoituresVoyageursTailleNVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Voiture_voyageurs/Taille N/voiture_voyageurs_tailleN_vue2.png" alt="VoituresVoyageursTailleNvue2" id="VoituresVoyageursTailleNVue2">
+    <img src="./Images/VoitureVoyageurs/TailleN/<?php echo $et["Vue2"] ?>" alt="VoitureVoyageursTailleNVue2" id="VoituresVoyageursTailleNVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Voiture_voyageurs/Taille N/voiture_voyageurs_tailleN_vue3.png" alt="VoituresVoyageursTailleNvue3" id="VoituresVoyageursTailleNVue3">
+    <img src="./Images/VoitureVoyageurs/TailleN/<?php echo $et["Vue3"] ?>" alt="VoitureVoyageursTailleNVue3" id="VoituresVoyageursTailleNVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Voiture_voyageurs/Taille N/voiture_voyageurs_tailleN_vue4.png" alt="VoituresVoyageursTailleNvue4" id="VoituresVoyageursTailleNVue4">
+    <img src="./Images/VoitureVoyageurs/TailleN/<?php echo $et["Vue4"] ?>" alt="VoitureVoyageursTailleNVue4" id="VoituresVoyageursTailleNVue4">
     </div>
   </div>
 </div>
@@ -41,15 +51,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 70€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionNVoy">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Voiture de voyageurs a étage mise en service par la compagnie ferroviaire allemande DB en 2005 et elle est encore utilisée aujourd’hui. <br>
-    Ce modèle réduit à été fabriqué par Fleishmann avec la réference FL862812 en taille N. <br>
-    La longueur totale de la voiture est de 167mm (16.7cm).
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -61,3 +74,14 @@
 </body>
 <script src="./js/Carrousel.js"></script>
 </html>
+
+
+
+
+
+    
+    
+
+
+
+

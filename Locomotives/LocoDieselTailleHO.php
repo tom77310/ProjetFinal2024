@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 34");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,16 +26,19 @@
         <h1>Locomotive Diesel Taille HO</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Loco/loco_diesel/Taille HO/loco_diesel_tailleHO_vue1.png" alt="LocoDieselTailleHOvue1" id="LocoDieselTailleHOVue1">
+    <img src="./Images/Loco/Diesel/TailleHO/<?php echo $et["Vue1"] ?>" alt="LocoDieselTailleHOVue1" id="LocoDieselTailleHOVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Loco/loco_diesel/Taille HO/loco_diesel_tailleHO_vue2.png" alt="LocoDieselTailleHOvue2" id="LocoDieselTailleHOVue2">
+    <img src="./Images/Loco/Diesel/TailleHO/<?php echo $et["Vue2"] ?>" alt="LocoDieselTailleHOVue2" id="LocoDieselTailleHOVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Loco/loco_diesel/Taille HO/loco_diesel_tailleHO_vue3.png" alt="LocoDieselTailleHOvue3" id="LocoDieselTailleHOVue3">
+    <img src="./Images/Loco/Diesel/TailleHO/<?php echo $et["Vue3"] ?>" alt="LocoDieselTailleHOVue3" id="LocoDieselTailleHOVue3">
     </div>
   </div>
 </div>
@@ -38,14 +47,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 330€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionHODiesel">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette locomotive diesel à été utilisée  par la compagnie ferroviaire SNCF entre 1992 et 2004. <br>
-    Ce modèle réduit a été fabriqué en plastique par R37 avec la réference HO41107DC. 
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

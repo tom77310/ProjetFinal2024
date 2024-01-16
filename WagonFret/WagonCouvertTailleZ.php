@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 2");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +26,22 @@
         <h1>Wagon de Fret Couvert Taille Z</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_couvert/page_produit_z/image_wagon_de_fret_couvert_taille_z.png" alt="WagonCouvertTailleZvue1" id="CouvertTailleZVue1">
+<img src="./Images/Couvert/TailleZ/<?php echo $et["Vue1"] ?>" alt="CouvertTailleZVue1" id="CouvertTailleZVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_z/Image_page_produit_vue_2_Wagon_fret_couvert_taille_z.png" alt="WagonCouvertTailleZvue2" id="CouvertTailleZVue2">
+    <img src="./Images/Couvert/TailleZ/<?php echo $et["Vue2"] ?>" alt="CouvertTailleZVue2" id="CouvertTailleZVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_z/Image_page_produit_vue_3_Wagon_fret_couvert_taille_z.png" alt="WagonCouvertTailleZvue3" id="CouvertTailleZVue3">
+<img src="./Images/Couvert/TailleZ/<?php echo $et["Vue3"] ?>" alt="CouvertTailleZVue3" id="CouvertTailleZVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_z/Image_page_produit_vue_4_Wagon_fret_couvert_taille_z.png" alt="WagonCouvertTailleZvue4" id="CouvertTailleZVue4">
+<img src="./Images/Couvert/TailleZ/<?php echo $et["Vue4"] ?>" alt="CouvertTailleZVue4" id="CouvertTailleZVue4">
     </div>
   </div>
 </div>
@@ -41,17 +50,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 50€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="description">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Wagon couvert de la compagnie ferroviaire SNCF, fabriquer par AZAR MODELS avec la référence AZW02-STAX en taille Z. 
-   C’est un wagon couvert avec feux de fin de convoie, la caisse du wagon est réalisée en 3D haute définition, la peinture et l’inscription sont sérigraphié pour avoir une haute résolution.
-   Il a une grande résistance, il est équiper d’essieux en métal avec finition nickel brun, son attelage du fabriquant Marklin est compatible avec l’ensemble des modèles des constructeurs européens. 
-   La caisse et le châssis sont en injection plastique. Ce wagon couvert a été mise en service par la SNCF en 1945 jusqu’en 1991. Ce wagon fait partis de la dernière série de wagon couvert a 2 essieux, produit en grande série.
-    </p>
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?></p>
 </div>
 
 
@@ -65,3 +75,13 @@
 </body>
 <script src="./js/Carrousel.js"></script>
 </html>
+
+
+
+
+  
+
+
+
+
+

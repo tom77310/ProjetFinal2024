@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM pagepresentation Where id = 3");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,29 +19,34 @@
 ?>
     <!-- Body -->
 <h1>Les Locomotives Electriques </h1>
+<?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div class="LocoElec">
     <div class="LocoElecHaut">
         <div class="LocoElecTailleHO">
-            <a href="./LocoElecTailleHO.php"><img src="./Images/Loco/loco elec/Taille HO/Loco_elec-tailleHO_vues1.png" alt="LocoElecTailleHO" id="LocoElecTailleHO"></a>
+            <a href="./LocoElecTailleHO.php"><img src="./Images/Loco/Elec/TailleHO/<?php echo $et["TailleHO"] ?>" alt="LocoElecTailleHO" id="LocoElecTailleHO"></a>
             <p>Locomotive Electrique Taille HO</p>
         </div>
         <div class="LocoElecTailleZ">
-           <a href="./LocoElecTailleZ.php"> <img src="./Images/Loco/loco elec/Taille Z/loco_elec-tailleZ_vue1.png" alt="LocoElecTailleZ" id="LocoElecTailleZ"></a>
+           <a href="./LocoElecTailleZ.php"> <img src="./Images/Loco/Elec/TailleZ/<?php echo $et["TailleZ"] ?>" alt="LocoElecTailleZ" id="LocoElecTailleZ"></a>
             <p>Locomotive Electrique Taille Z</p>
         </div>
     </div>
     <div class="LocoElecBas">
         <div class="LocoElecTailleN">
-            <a href="./LocoElecTailleN.php"><img src="./Images/Loco/loco elec/Taille N/loco_elec_tailleN_vue1.png" alt="LocoElecTailleN" id="LocoElecTailleN"></a>
+            <a href="./LocoElecTailleN.php"><img src="./Images/Loco/Elec/TailleN/<?php echo $et["TailleN"] ?>" alt="LocoElecTailleN" id="LocoElecTailleN"></a>
             <p>Locomotive Electrique Taille N</p>
         </div>
         <div class="LocoElecTailleG">
-            <a href="./LocoElecTailleG.php"><img src="./Images/Loco/loco elec/Taille G/loco_elec_tailleG_vue1.png" alt="LocoElecTailleG" id="LocoElecTailleG"></a>
+            <a href="./LocoElecTailleG.php"><img src="./Images/Loco/Elec/TailleG/<?php echo $et["TailleG"] ?>" alt="LocoElecTailleG" id="LocoElecTailleG"></a>
             <p>Locomotive Electrique Taille G</p>
         </div>
     </div>
 </div>
-
+<?php
+            }
+        ?>
 
 <!-- footer -->
 <?php

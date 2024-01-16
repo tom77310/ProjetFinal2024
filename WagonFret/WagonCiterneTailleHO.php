@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 27");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,22 +27,25 @@
         <h1>Wagon Citerne Taille HO</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_citernes/Taille HO/wagon_citerne_tailleHO_vue1.png" alt="WagonCiterneTailleHOvue1" id="CiterneTailleHOVue1">
+<img src="./Images/Citerne/TailleHO/<?php echo $et["Vue1"] ?>" alt="CiterneTailleHOVue1" id="CiterneTailleHOVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_citernes/Taille HO/wagon_citerne_tailleHO_vue2.png" alt="WagonCiterneTailleHOvue2" id="CiterneTailleHOVue2">
+<img src="./Images/Citerne/TailleHO/<?php echo $et["Vue2"] ?>" alt="CiterneTailleHOVue2" id="CiterneTailleHOVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_citernes/Taille HO/wagon_citerne_tailleHO_vue3.png" alt="WagonCiterneTailleHOvue3" id="CiterneTailleHOVue3">
+<img src="./Images/Citerne/TailleHO/<?php echo $et["Vue3"] ?>" alt="CiterneTailleHOVue3" id="CiterneTailleHOVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_citernes/Taille HO/wagon_citerne_tailleHO_vue4.png" alt="WagonCiterneTailleHOvue4" id="CiterneTailleHOVue4">
+<img src="./Images/Citerne/TailleHO/<?php echo $et["Vue4"] ?>" alt="CiterneTailleHOVue4" id="CiterneTailleHOVue4">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_citernes/Taille HO/wagon_citerne_tailleHO_vue5.png" alt="WagonCiterneTailleHOvue5" id="CiterneTailleHOVue5">
+<img src="./Images/Citerne/TailleHO/<?php echo $et["Vue5"] ?>" alt="CiterneTailleHOVue5" id="CiterneTailleHOVue5">
     </div>
   </div>
 </div>
@@ -44,15 +54,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 65€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionHOCiterne">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Wagon Citerne articulé de la compagnie suisse CFF, fabriquer par PIKO avec la réference 24604 en taille HO. 
-    Il à été mis en service en 2005 et il est toujours en service aujourd'hui. <br>
-    Sa longueur hors tampon est de 190mm (19cm).
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

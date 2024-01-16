@@ -1,3 +1,11 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 1");
+$ps->execute();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/PageProduit.css">
     <link rel="stylesheet" href="./CSS/Carrousel.css">
-    <!-- Bootstrap -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>     -->
-<title>Wagon de Fret CouvertTaille HO</title>
+   <title>Wagon de Fret CouvertTaille HO</title>
 </head>
 
 <body>
@@ -23,19 +28,22 @@
         <h1>Wagon de Fret Couvert Taille HO</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_couvert/page_produit_HO/Image_page_Wagon_fret_couvert_vue1_HO.png" alt="WagonCouvertTailleHOvue1" id="CouvertTailleHOVue1">
+<img src="./Images/Couvert/TailleHO/<?php echo $et["Vue1"] ?>" alt="CouvertTailleHOVue1" id="CouvertTailleHOVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_HO/Image_page_produit_vue_2_Wagon_fret_couvert_HO.png" alt="WagonCouvertTailleHOvue2" id="CouvertTailleHOVue2">
+    <img src="./Images/Couvert/TailleHO/<?php echo $et["Vue2"] ?>" alt="CouvertTailleHOVue2" id="CouvertTailleHOVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_HO/Image_page_produit_vue_3_Wagon_fret_couvert_HO.png" alt="WagonCouvertTailleHOvue3" id="CouvertTailleHOVue3">
+<img src="./Images/Couvert/TailleHO/<?php echo $et["Vue3"] ?>" alt="CouvertTailleHOVue3" id="CouvertTailleHOVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_HO/Image_page_produit_vue_4_Wagon_fret_couvert_HO.png" alt="WagonCouvertTailleHOvue4" id="CouvertTailleHOVue4">
+<img src="./Images/Couvert/TailleHO/<?php echo $et["Vue4"] ?>" alt="CouvertTailleHOVue4" id="CouvertTailleHOVue4">
     </div>
   </div>
 </div>
@@ -44,16 +52,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 40€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
-<div class="description">
+<div class="descriptionCouvertHO">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-Wagon couvert de la compagnie ferroviaire Allemande DB,fabriquer par Marklin avec la réference MA46156 en taille HO. <br>
-Wagon couvert, fonctionnant sous courant alternatif 3 rails, <br>
-mise en service par la compagnie ferroviaire Deutshe Bundesbahn (DB) entre 1971 et 1991. <br>
-Sa longueur est de 139mm (13,9cm).
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

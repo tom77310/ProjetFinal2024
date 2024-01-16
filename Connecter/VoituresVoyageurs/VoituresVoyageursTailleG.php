@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 53");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,13 +27,16 @@
         <h1>Voitures de Voyageurs Taille G</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Voiture_voyageurs/Taille G/voiture_voyageurs_talleG_vue1.png" alt="VoituresVoyageursTailleGvue1" id="VoituresVoyageursTailleGVue1">
+    <img src="./Images/VoitureVoyageurs/TailleG/<?php echo $et["Vue1"] ?>" alt="VoitureVoyageursTailleGVue1" id="VoituresVoyageursTailleGVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Voiture_voyageurs/Taille G/voiture_voyageurs_talleG_vue2.png" alt="VoituresVoyageursTailleGvue2" id="VoituresVoyageursTailleGVue2">
+    <img src="./Images/VoitureVoyageurs/TailleG/<?php echo $et["Vue2"] ?>" alt="VoitureVoyageursTailleGVue2" id="VoituresVoyageursTailleGVue2">
     </div>
   </div>
 </div>
@@ -35,15 +45,19 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 280€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionGVoy">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Voiture de voyageurs  mise en service par la compagnie ferroviaire allemande RHB  en 2005 et elle est encore utilisée aujourd’hui, 
-    Ce modèle réduit à été fabriqué par LGB avec la réference 33100 en taille G.
-    La longueur totale de la voiture est de 770mm (77cm).
+
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -55,3 +69,8 @@
 </body>
 <script src="./js/Carrousel.js"></script>
 </html>
+
+
+
+
+

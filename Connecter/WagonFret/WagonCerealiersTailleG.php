@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 22");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,13 +26,16 @@
         <h1>Wagon Cerealier Taille G</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_cerealers/Taille G/wagon_cerealier_tailleG_vue1.png" alt="WagonCerealierTailleGvue1" id="CerealierTailleGVue1">
+    <img src="./Images/Cerealiers/TailleG/<?php echo $et["Vue1"] ?>" alt="CerealierTailleGVue1" id="CerealierTailleGVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_cerealers/Taille G/wagon_cerealier_tailleG_vue2.png" alt="WagonCerealierTailleGvue2" id="CerealierTailleGVue2">
+    <img src="./Images/Cerealiers/TailleG/<?php echo $et["Vue2"] ?>" alt="CerealierTailleGVue2" id="CerealierTailleGVue2">
     </div>
   </div>
 </div>
@@ -35,15 +44,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 240€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionGCerealier">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Wagon cerealier exploité par la compagnie ferroviaire suisse RHB depuis 2005 et il est toujours utilisé aujourd’hui, <br>
-    fabriquer par LGB avec la réference 46696 en taille G.
-    Il mesure 550 mm (55cm).
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

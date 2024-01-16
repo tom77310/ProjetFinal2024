@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 12");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,31 +27,34 @@
         <h1>Lot de 3 Wagons de Fret Plat Porte Conteneur Taille N</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_n/wagon_porte_containeur_taille_N_vue1.png" alt="WagonConteneurTailleNvue1" id="ConteneurTailleNVue1">
+<img src="./Images/Conteneur/TailleN/<?php echo $et["Vue1"] ?>" alt="ConteneurTailleNVue1" id="ConteneurTailleNVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_n/wagon_porte_containeur_taille_N_vue2.png" alt="WagonConteneurTailleNvue2" id="ConteneurTailleNVue2">
+    <img src="./Images/Conteneur/TailleN/<?php echo $et["Vue2"] ?>" alt="ConteneurTailleNVue2" id="ConteneurTailleNVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_n/wagon_porte_containeur_taille_N_vue3.png" alt="WagonConteneurTailleNvue3" id="ConteneurTailleNVue3">
+<img src="./Images/Conteneur/TailleN/<?php echo $et["Vue3"] ?>" alt="ConteneurTailleNVue3" id="ConteneurTailleNVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_n/wagon_porte_containeur_taille_N_vue4.png" alt="WagonConteneurTailleNvue4" id="ConteneurTailleNVue4">
+<img src="./Images/Conteneur/TailleN/<?php echo $et["Vue4"] ?>" alt="ConteneurTailleNVue4" id="ConteneurTailleNVue4">
     </div>
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_n/wagon_porte_containeur_taille_N_vue5.png" alt="WagonConteneurTailleNvue5" id="ConteneurTailleNVue5">
+<img src="./Images/Conteneur/TailleN/<?php echo $et["Vue5"] ?>" alt="ConteneurTailleNVue5" id="ConteneurTailleNVue5">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_n/wagon_porte_containeur_taille_N_vue6.png" alt="WagonConteneurTailleNvue6" id="ConteneurTailleNVue6">
+<img src="./Images/Conteneur/TailleN/<?php echo $et["Vue6"] ?>" alt="ConteneurTailleNVue6" id="ConteneurTailleNVue6">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_n/wagon_porte_containeur_taille_N_vue7.png" alt="WagonConteneurTailleNvue7" id="ConteneurTailleNVue7">
+<img src="./Images/Conteneur/TailleN/<?php echo $et["Vue7"] ?>" alt="ConteneurTailleNVue7" id="ConteneurTailleNVue7">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_plat_porte_conteur/page_produit_n/wagon_porte_containeur_taille_N_vue8.png" alt="WagonConteneurTailleNvue8" id="ConteneurTailleNVue8">
+<img src="./Images/Conteneur/TailleN/<?php echo $et["Vue8"] ?>" alt="ConteneurTailleNVue8" id="ConteneurTailleNVue8">
     </div>
   </div>
 </div>
@@ -53,15 +63,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 130€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionNConteneur">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Lot de 3 Wagons plat porte conteneur, exploités par la compagnie ferroviaire SNCF entre 1991 et 2004.
-Ces wgons ont éte fabriquer par Minitrix avec la réference 15072 en taille N. 
-Ils ont une longueur totale chacun sans les tampons de 372mm (37.2cm).
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -76,3 +89,14 @@ Ils ont une longueur totale chacun sans les tampons de 372mm (37.2cm).
 </body>
 <script src="./js/Carrousel.js"></script>
 </html>
+
+
+
+
+
+
+
+
+
+
+

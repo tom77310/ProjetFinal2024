@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 29");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,16 +27,19 @@
         <h1>Lot de 3 Wagons Citerne Taille Z</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_citernes/Taille Z/wagon_citerne_tailleZ_vue1.png" alt="WagonCiterneTailleZvue1" id="CiterneTailleZVue1">
+<img src="./Images/Citerne/TailleZ/<?php echo $et["Vue1"] ?>" alt="CiterneTailleZVue1" id="CiterneTailleZVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_citernes/Taille Z/wagon_citerne_tailleZ_vue2.png" alt="WagonCiterneTailleZvue2" id="CiterneTailleZVue2">
+<img src="./Images/Citerne/TailleZ/<?php echo $et["Vue2"] ?>" alt="CiterneTailleZVue2" id="CiterneTailleZVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_citernes/Taille Z/wagon_citerne_tailleZ_vue3.png" alt="WagonCiterneTailleZvue3" id="CiterneTailleZVue3">
+<img src="./Images/Citerne/TailleZ/<?php echo $et["Vue3"] ?>" alt="CiterneTailleZVue3" id="CiterneTailleZVue3">
     </div>
   </div>
 </div>
@@ -38,19 +48,20 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 95€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionZCiterne">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Lot de 3 Wagon citerne exploité par la compagnie ferroviaire autrichienne OBB entre 1945 et 1970. <br>
-    Ces modèles réduits ont été fabriqués par Marklin avec la réference 82320 en taille Z.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
-
-
-
 
 
     <!-- footer -->

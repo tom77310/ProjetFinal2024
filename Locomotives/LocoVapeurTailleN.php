@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 43");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,43 +25,47 @@
         <a href="./LocomotiveVapeur.php">Retour vers les Locomotives a Vapeurs</a>
         <h1>Locomotive a Vapeur Taille N</h1>
     </div>
-    <!-- Carrousel -->
-<div id="carousel-container">
+    <!-- Carroussel -->
+    <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Loco/loco vapeur/Taille N/loco_vapeur_tailleN_vue1.png" alt="LocoVapeurTailleNvue1" id="LocoVapeurTailleNVue1">
+        <?php
+            while ($et = $ps->fetch()) {
+        ?>
+             <img src="./Images/Loco/Vapeur/TailleN/<?php echo $et["Vue1"] ?>" alt="LocoVapeurTailleNvue1" id="LocoVapeurTailleNVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Loco/loco vapeur/Taille N/loco_vapeur_tailleN_vue2.png" alt="LocoVapeurTailleNvue2" id="LocoVapeurTailleNVue2">
+        <img src="./Images/Loco/Vapeur/TailleN/<?php echo $et["Vue2"] ?>" alt="LocoVapeurTailleNvue2" id="LocoVapeurTailleNVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Loco/loco vapeur/Taille N/loco_vapeur_tailleN_vue3.png" alt="LocoVapeurTailleNvue3" id="LocoVapeurTailleNVue3">
+    <img src="./Images/Loco/Vapeur/TailleN/<?php echo $et["Vue3"] ?>" alt="LocoVapeurTailleNvue3" id="LocoVapeurTailleNVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Loco/loco vapeur/Taille N/loco_vapeur_tailleN_vue4.png" alt="LocoVapeurTailleNvue4" id="LocoVapeurTailleNVue4">
+    <img src="./Images/Loco/Vapeur/TailleN/<?php echo $et["Vue4"] ?>" alt="LocoVapeurTailleNvue4" id="LocoVapeurTailleNVue4">
     </div>
+   </div>
 
-  </div>
-</div>
 <div class="bouton">
     <button id="prev-btn" onclick="prevSlide()">Précédent</button>
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droiteNVapeur">
-    <p>Prix unitaire : 330€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionNVapeur">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Cette locomotive a vapeur à été utilisée  par la compagnie Internationale des wagons lits entre 1832 et 1925. <br>
-    Ce modèle réduit a été fabriqué en plastique et en métal par Hoby66 avec la réference H4036D.  <br>
-    Elle fait 144mm(14.4cm)
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
-
-    <!-- footer -->
+<!-- footer -->
     <?php
     require_once("./Footer.php");
     ?>

@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM pagepresentation Where id = 1");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,29 +19,34 @@
 ?>
     <!-- Body -->
 <h1>Les Locomotives a Vapeurs </h1>
+<?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div class="LocoVapeur">
     <div class="LocoVapeurHaut">
         <div class="LocoVapeurTailleHO">
-            <a href="./LocoVapeurTailleHO.php"><img src="./Images/Loco/loco vapeur/Taille HO/locomotive_vapeur_tailleHO_vue1.png" alt="LocoVapeurTailleHO" id="LocoVapeurTailleHO"></a>
+            <a href="./LocoVapeurTailleHO.php"><img src="./Images/Loco/Vapeur/TailleHO/<?php echo $et["TailleHO"] ?>" alt="LocoVapeurTailleHO" id="LocoVapeurTailleHO"></a>
             <p>Locomotive a Vapeur Taille HO</p>
         </div>
         <div class="LocoVapeurTailleZ">
-           <a href="./LocoVapeurTailleZ.php"> <img src="./Images/Loco/loco vapeur/Taille Z/loco_vapeur_tailleZ_vue1.png" alt="LocoVapeurTailleZ" id="LocoVapeurTailleZ"></a>
+           <a href="./LocoVapeurTailleZ.php"> <img src="./Images/Loco/Vapeur/TailleZ/<?php echo $et["TailleZ"] ?>" alt="PresentationVapeurZ" id="LocoVapeurTailleZ"></a>
             <p>Locomotive a Vapeur Taille Z</p>
         </div>
     </div>
     <div class="LocoVapeurBas">
         <div class="LocoVapeurTailleN">
-            <a href="./LocoVapeurTailleN.php"><img src="./Images/Loco/loco vapeur/Taille N/loco_vapeur_tailleN_vue1.png" alt="LocoVapeurTailleN" id="LocoVapeurTailleN"></a>
+            <a href="./LocoVapeurTailleN.php"><img src="./Images/Loco/Vapeur/TailleN/<?php echo $et["TailleN"] ?>" alt="PresentationVapeurN" id="LocoVapeurTailleN"></a>
             <p>Locomotive a Vapeur Taille N</p>
         </div>
         <div class="LocoVapeurTailleG">
-            <a href="./LocoVapeurTailleG.php"><img src="./Images/Loco/loco vapeur/Taille G/loco_vapeur_tailleG_vue1.png" alt="LocoVapeurTailleG" id="LocoVapeurTailleG"></a>
-            <p>Locomotive a Vapeur Taille G</p>
+            <a href="./LocoVapeurTailleG.php"> <img src="./Images/Loco/Vapeur/TailleG/<?php echo $et["TailleG"] ?>" alt="PresentationVapeurG" id="LocoVapeurTailleG"></a>
+           <p>Locomotive a Vapeur Taille G</p>
         </div>
     </div>
 </div>
-
+<?php
+            }
+        ?>
 
 <!-- footer -->
 <?php

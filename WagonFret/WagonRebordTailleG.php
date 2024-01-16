@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 17");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,19 +26,25 @@
         <a href="./WagonRebord.php">Retour vers les wagons de Fret Plat a Rebord</a>
         <h1>Wagon de Fret Plat à Rebord Taille G</h1>
     </div>
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div class="WagonRebordTailleG">
-<img src="./Images/WagonFret/wagon_plat_rebords/page_produit_g/image_wagon_plat_rebord_tailleG_vue1.png" alt="WagonRebordTailleGvue1" id="RebordTailleGVue1">
+<img src="./Images/Rebord/TailleG/<?php echo $et["Vue1"] ?>" alt="RebordTailleGVue1" id="RebordTailleGVue1">
 <div class="droiteGRebord">
-    <p>Prix unitaire : 70€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 </div>
 <div class="descriptionGRebord">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Wagon couvert de la compagnie ferroviaire allemande DR, fabriquer par LGB avec la réference 43602 en taille G. 
-C’est un wagon couvert fabriqué en plastique, sa longueur est de 480 mm (48 cm), il est vendu neuf. 
-Ce wagon couvert a été mise en service par la compagnie ferrovire allemande DR entre 1945 et 1970.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

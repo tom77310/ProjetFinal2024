@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 56");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +27,22 @@
         <h1>Lot de 3 Voitures de Voyageurs Taille Z</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Voiture_voyageurs/Taille Z/voiture_voyageur_tailleZ_vue1.png" alt="VoitureVoyageursTailleZvue1" id="VoituresVoyageursTailleZVue1">
+    <img src="./Images/VoitureVoyageurs/TailleZ/<?php echo $et["Vue1"] ?>" alt="VoitureVoyageursTailleZVue1" id="VoituresVoyageursTailleZVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Voiture_voyageurs/Taille Z/voiture_voyageur_tailleZ_vue2.png" alt="VoitureVoyageursTailleZvue2" id="VoituresVoyageursTailleZVue2">
+    <img src="./Images/VoitureVoyageurs/TailleZ/<?php echo $et["Vue2"] ?>" alt="VoitureVoyageursTailleZVue2" id="VoituresVoyageursTailleZVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Voiture_voyageurs/Taille Z/voiture_voyageur_tailleZ_vue3.png" alt="VoitureVoyageursTailleZvue3" id="VoituresVoyageursTailleZVue3">
+    <img src="./Images/VoitureVoyageurs/TailleZ/<?php echo $et["Vue3"] ?>" alt="VoitureVoyageursTailleZVue3" id="VoituresVoyageursTailleZVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Voiture_voyageurs/Taille Z/voiture_voyageur_tailleZ_vue4.png" alt="VoitureVoyageursTailleZvue4" id="VoituresVoyageursTailleZVue4">
+    <img src="./Images/VoitureVoyageurs/TailleZ/<?php echo $et["Vue4"] ?>" alt="VoitureVoyageursTailleZVue4" id="VoituresVoyageursTailleZVue4">
     </div>
   </div>
 </div>
@@ -41,15 +51,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droiteZVoy">
-    <p>Prix unitaire : 130€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionZVoy">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Set de 3 voiture de voyageurs de seconde classe mises en service par la compagnie ferroviaire allemande DB entre 1971 et 1991. <br>
-    Ce modèle réduit à été fabriqué par LS MODELS avec la réference 87402 en taille Z. <br>
-    Une fois les 3 voitures attachées elles font une longueurs totale de 365mm (36.5cm) environ.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

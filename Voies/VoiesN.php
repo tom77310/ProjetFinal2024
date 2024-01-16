@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 51");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,17 +26,25 @@
         <a href="../PagesPrincipales/Les_Voies.php">Retour vers les Voies</a>
         <h1> Voies Taille N</h1>
     </div>
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div class="VoiesTailleN">
-<img src="./Images/Voies/Taille N/voieTailleN.png" alt="VoiesTailleNvue1" id="VoiesTailleNVue1">
+<img src="./Images/Voies/TailleN/<?php echo $et["Vue1"] ?>" alt="VoieTailleNVue1" id="VoiesTailleNVue1">
 <div class="droiteNVoies">
-    <p>Prix unitaire : 3€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 </div>
 <div class="descriptionNVoies">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Cette rails courbée est fabriquée en plastique par Minitrix sous la réference 14929.  
+   <?php 
+   echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -43,3 +58,6 @@
     ?>
 </body>
 </html>
+
+
+

@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM pagesprincipales Where id = 4");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,28 +23,32 @@
     <!-- Body -->
     <h1>Le Materiel Roulant</h1>
     <div class="materielroulant">
-
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
         <div class="locomotives">
-            <a href="./Locomotives.php"><img src="./Images/Materiel Roulant/presentations locomotives.png" alt="presentation_locoVapeur" id="Locomotives"></a>
+            <a href="./Locomotives.php"><img src="./Images/Materiel Roulant/<?php echo $et["Image1"] ?>" alt="Locomotive" id="Locomotives"></a>
             <p>Les Locomotives</p>
         </div>
         <div class="wagonfret">
-            <a href="./Wagons_fret.php"><img src="./Images/Materiel Roulant/presentation_wagon_fret.png" alt="presentationWagonFret" id="WagonsFret"></a>
+            <a href="./Wagons_fret.php"><img src="./Images/Materiel Roulant/<?php echo $et["Image2"] ?>" alt="WagonFret" id="WagonsFret"></a>
             <p>Les Wagons de fret</p>
         </div>
     </div>
         <div class="materielroulantbas">
 
             <div class="automotrices">
-                <a href="./Automotrices.php"><img src="./Images/Materiel Roulant/presentation automotrices.png" alt="presentationautomotrices" id="automotrices"></a>
+            <a href="./Automotrices.php"><img src="./Images/Materiel Roulant/<?php echo $et["Image3"] ?>" alt="Automotrices" id="automotrices"></a>
                 <p>Les Automotrices</p>
             </div>
             <div class="VoituresVoyageurs">
-                <a href="./Voitures_Voyageurs.php"><img src="./Images/Materiel Roulant/presentation voitures de voyageurs.png" alt="presentationVoituresVoyageurs" id="VoituresVoyageurs"></a>
+            <a href="./Voitures_Voyageurs.php"><img src="./Images/Materiel Roulant/<?php echo $et["Image4"] ?>" alt="VoituresVoyageurs" id="VoituresVoyageurs"></a>
                 <p>Les Voitures de Voyageurs</p>
             </div>
         </div>
-
+        <?php
+            }
+        ?>
     <!-- footer -->
     <?php
     require_once("./Footer.php");
@@ -45,3 +56,10 @@
 </body>
 
 </html>
+
+
+
+
+           
+
+

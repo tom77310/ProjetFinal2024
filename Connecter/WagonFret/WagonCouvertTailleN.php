@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 8");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +27,22 @@
         <h1>Wagon de Fret Couvert Taille N</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/WagonFret/Wagon_couvert/page_produit_n/image_wagon_de_fret_couvert_taille_n._vue1_N.png" alt="WagonCouvertTailleNvue1" id="CouvertTailleNVue1">
+<img src="./Images/Couvert/TailleN/<?php echo $et["Vue1"] ?>" alt="CouvertTailleNVue1" id="CouvertTailleNVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_n/image_wagon_de_fret_couvert_taille_n._vue2_N.png" alt="WagonCouvertTailleNvue2" id="CouvertTailleNVue2">
+    <img src="./Images/Couvert/TailleN/<?php echo $et["Vue2"] ?>" alt="CouvertTailleNVue2" id="CouvertTailleNVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_n/image_wagon_de_fret_couvert_taille_n_vue3.png" alt="WagonCouvertTailleNvue3" id="CouvertTailleNVue3">
+<img src="./Images/Couvert/TailleN/<?php echo $et["Vue3"] ?>" alt="CouvertTailleNVue3" id="CouvertTailleNVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/WagonFret/Wagon_couvert/page_produit_n/image_wagon_de_fret_couvert_taille_n_vue4.png" alt="WagonCouvertTailleNvue4" id="CouvertTailleNVue4">
+<img src="./Images/Couvert/TailleN/<?php echo $et["Vue4"] ?>" alt="CouvertTailleNVue4" id="CouvertTailleNVue4">
     </div>
   </div>
 </div>
@@ -41,15 +51,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 50€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionNCouvert">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Wagon couvert de la compagnie ferroviaire SNCF, fabriquer par Trains160 avec la référence 16023 en taille N. 
-   Il est vêtu d’une livrée 2 tons (brun/rouge) avec le sigle FRET SNCF en blanc sur les deux cotés du wagon. 
-   Ce wagon couvert a été mise en service par la SNCF entre 1970 jusqu’en 2004.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -64,3 +77,11 @@
 </body>
 <script src="./js/Carrousel.js"></script>
 </html>
+
+
+
+
+
+
+
+

@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM pagesprincipales Where id = 2");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,21 +22,26 @@
     ?>
     <!-- Body -->
     <h1>Les Locomotives </h1>
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
     <div class="Locomotive">
         <div class="LocomotiveVapeur">
-            <a href="../Locomotives/LocomotiveVapeur.php"><img src="./Images/Materiel Roulant/presentations locomotives.png" alt="PresentationLocoVapeur" id="LocomotiveVapeur"></a>
+            <a href="../Locomotives/LocomotiveVapeur.php"><img src="./Images/Locomotives/<?php echo $et["Image1"] ?>" alt="LocomotiveVapeur" id="LocomotiveVapeur"></a>
             <p>Locomotives a Vapeur</p>
         </div>
         <div class="LocomotiveDiesel">
-            <a href="../Locomotives/LocoDiesel.php"><img src="./Images/Locomotives/loco_diesel_tailleHO_vue1.png" alt="PresentationLocoDiesel" id="LocomotiveDiesel"></a>
+            <a href="../Locomotives/LocoDiesel.php"><img src="./Images/Locomotives/<?php echo $et["Image2"] ?>" alt="LocomotiveDiesel" id="LocomotiveDiesel"></a>
             <p>Les Locomotives Diesel</p>
         </div>
         <div class="LocomotiveElec">
-            <a href="../Locomotives/LocoElec.php"><img src="./Images/Locomotives/Loco_elec-tailleHO_vues1.png" alt="PresentationLocoElec" id="LocomotiveElec"></a>
-            <p>Locomotive Electrique</p>
+            <a href="../Locomotives/LocoElec.php"><img src="./Images/Locomotives/<?php echo $et["Image3"] ?>" alt="LocomotiveElec" id="LocomotiveElec"></a>
+            <p>Locomotives Electrique</p>
         </div>
     </div>
-
+    <?php
+            }
+        ?>
 
     <!-- footer -->
     <?php
@@ -38,3 +50,7 @@
 </body>
 
 </html>
+
+
+
+

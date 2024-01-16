@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 49");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,17 +25,25 @@
         <a href="../PagesPrincipales/Les_Voies.php">Retour vers les Voies</a>
         <h1>Wagon Voies Taille G</h1>
     </div>
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div class="VoiesTailleG">
-<img src="./Images/Voies/taille G/voie_tailleG.png" alt="VoiesTailleGvue1" id="VoiesTailleGVue1">
+<img src="./Images/Voies/TailleG/<?php echo $et["Vue1"] ?>" alt="VoieTailleGVue1" id="VoiesTailleGVue1">
 <div class="droiteGVoies">
-    <p>Prix unitaire : 6€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 </div>
 <div class="descriptionGVoies">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Ce set comprend 2 aiguillages et 2 courbes de voies G fabriqués en plastique par Marklin sous la réference 23401. 
+   <?php 
+   echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -43,3 +57,9 @@
     ?>
 </body>
 </html>
+
+
+
+
+
+

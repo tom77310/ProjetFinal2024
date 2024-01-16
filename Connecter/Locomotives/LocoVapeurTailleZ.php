@@ -1,3 +1,8 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 44");
+$ps->execute();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,37 +25,45 @@
         <h1>Locomotive a Vapeur Taille Z</h1>
     </div>
     <!-- Carrousel -->
-<div id="carousel-container">
+    <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Loco/loco vapeur/Taille Z/loco_vapeur_tailleZ_vue1.png" alt="LocoVapeurTailleZvue1" id="LocoVapeurTailleZVue1">
+        <?php
+            while ($et = $ps->fetch()) {
+        ?>
+             <img src="./Images/Loco/Vapeur/TailleZ/<?php echo $et["Vue1"] ?>" alt="LocoVapeurTailleZvue1" id="LocoVapeurTailleZVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Loco/loco vapeur/Taille Z/loco_vapeur_tailleZ_vue2.png" alt="LocoVapeurTailleZvue2" id="LocoVapeurTailleZVue2">
+        <img src="./Images/Loco/Vapeur/TailleZ/<?php echo $et["Vue2"] ?>" alt="LocoVapeurTailleZvue2" id="LocoVapeurTailleZVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Loco/loco vapeur/Taille Z/loco_vapeur_tailleZ_vue3.png" alt="LocoVapeurTailleZvue3" id="LocoVapeurTailleZVue3">
+    <img src="./Images/Loco/Vapeur/TailleZ/<?php echo $et["Vue3"] ?>" alt="LocoVapeurTailleZvue3" id="LocoVapeurTailleZVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Loco/loco vapeur/Taille Z/loco_vapeur_tailleZ_vue4.png" alt="LocoVapeurTailleZvue4" id="LocoVapeurTailleZVue4">
+    <img src="./Images/Loco/Vapeur/TailleZ/<?php echo $et["Vue4"] ?>" alt="LocoVapeurTailleZvue4" id="LocoVapeurTailleZVue4">
     </div>
-  </div>
+   </div>
 </div>
+
 <div class="bouton">
     <button id="prev-btn" onclick="prevSlide()">Précédent</button>
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droiteZVapeur">
-    <p>Prix unitaire : 240€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionZVapeur">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette locomotive a vapeur à été utilisée  par la compagnie ferroviaire allemande DR entre 1946 et 1970. <br>
-    Ce modèle réduit a été fabriqué en plastique par Marklin avec la réference 88997.  <br>
-    Elle mesure 89mm (8.9cm) sans compter les tampons.
-    </p>
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
+   
+     </p>
 </div>
 
 

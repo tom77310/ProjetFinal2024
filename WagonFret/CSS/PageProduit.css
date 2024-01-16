@@ -39,6 +39,19 @@ h1{
     width: 519px;
     height: 336px;
 }
+/* classe description Wagon Couvert TailleHO*/
+.descriptionCouvertHO{
+    border: 5px black solid;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 80%;
+    height: 135px;
+    margin: 50px auto;
+}
+/* paragraphe de la classe description Wagon couvert TailleHO */
+.descriptionCouvertHO p{
+    font-size: 24px;
+}
 
 /* Taille Z */
 
@@ -975,7 +988,7 @@ h1{
     border: 5px black solid;
     padding-left: 20px;
     padding-top: 10px;
-    width: 55%;
+    width: 86%;
     height: 135px;
     margin: 50px auto;
 }

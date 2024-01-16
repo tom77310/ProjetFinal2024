@@ -19,7 +19,7 @@
     <!--Barre de navigation  -->
     <nav class="container1">
 
-        <a class="hideHover" href="./Accueil_non_connecter.php">
+        <a class="hideHover" href="../PagesPrincipales/Accueil_connecter.php">
             <img id="logo" src="./Images/barre de nav connecter/logo_site.png" alt="logo_site">
         </a>
         <div class="navCat" id="cat1">

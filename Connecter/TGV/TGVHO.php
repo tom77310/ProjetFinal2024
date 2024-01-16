@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 47");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +27,22 @@
         <h1>TGV Ouigo Taille HO</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/TGV/Taille HO/TGV_tailleHO_vue1.png" alt="TGVTailleHOvue1" id="TGVTailleHOVue1">
+<img src="./Images/TGV/TailleHO/<?php echo $et["Vue1"] ?>" alt="TGVTailleHOVue1" id="TGVTailleHOVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/TGV/Taille HO/TGV_tailleHO_vue2.png" alt="TGVTailleHOvue2" id="TGVTailleHOVue2">
+<img src="./Images/TGV/TailleHO/<?php echo $et["Vue2"] ?>" alt="TGVTailleHOVue2" id="TGVTailleHOVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/TGV/Taille HO/TGV_tailleHO_vue3.png" alt="TGVTailleHOvue3" id="TGVTailleHOVue3">
+<img src="./Images/TGV/TailleHO/<?php echo $et["Vue3"] ?>" alt="TGVTailleHOVue3" id="TGVTailleHOVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/TGV/Taille HO/TGV_tailleHO_vue4.png" alt="TGVTailleHOvue4" id="TGVTailleHOVue4">
+<img src="./Images/TGV/TailleHO/<?php echo $et["Vue4"] ?>" alt="TGVTailleHOVue4" id="TGVTailleHOVue4">
     </div>
   </div>
 </div>
@@ -41,16 +51,21 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 350€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionHOTGV">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette automotrice TGV Ouigo a été mise en service  par la compagnie ferroviaire SNCF en 2005 et elle est toujours en service aujourd’hui. <br>
-    Ce modèle réduit a été fabriqué en plastique par le fabriquant JOUEF avec la réference 2413. 
+   <?php 
+   echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
+
 
 
     <!-- footer -->
@@ -60,3 +75,11 @@
 </body>
 <script src="./js/Carrousel.js"></script>
 </html>
+
+
+
+
+
+
+
+

@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 21");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,19 +24,25 @@
         <a href="./WagonBache.php">Retour vers les Wagons Bachés</a>
         <h1>Lot de 3 Wagons Bachés Taille Z</h1>
     </div>
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div class="WagonBacheTailleZ">
-<img src="./Images/WagonFret/Wagon_bachés/Taille Z/wagon_bachés_tailleZ_vue1.png" alt="WagonBacheTailleZvue1" id="BacheTailleZVue1">
+<img src="./Images/Bache/TailleZ/<?php echo $et["Vue1"] ?>" alt="BacheTailleZVue1" id="BacheTailleZVue1">
 <div class="droiteZBache">
-    <p>Prix unitaire : 130€ <br></p>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
        <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 </div>
 <div class="descriptionZBache">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Lot de 3 Wagon bâchés exploités par la compagnie ferroviaire SNCF entre 1992 et 2004. <br>
-    Ces wagons ont été fabriqués par Marklin avec la réference 82247 en taille Z .  <br>
-    Ils font 85 mm chacun sans compter les tampons.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

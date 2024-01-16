@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 16");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,16 +27,19 @@
         <h1>Lot de 2 Wagons de Fret Plat a Rebord Taille N</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
     <div id="carousel-container">
         <div id="carousel">
             <div class="carousel-item">
-                <img src="./Images/WagonFret/wagon_plat_rebords/page_produit_n/image_wagon_plat_rebord_tailleN_vue1.png" alt="WagonRebordTailleNvue1" id="RebordTailleNVue1">
+<img src="./Images/Rebord/TailleN/<?php echo $et["Vue1"] ?>" alt="RebordTailleNVue1" id="RebordTailleNVue1">
             </div>
             <div class="carousel-item">
-                <img src="./Images/WagonFret/wagon_plat_rebords/page_produit_n/image_wagon_plat_rebord_tailleN_vue2.png" alt="WagonRebordTailleNvue2" id="RebordTailleNVue2">
+<img src="./Images/Rebord/TailleN/<?php echo $et["Vue2"] ?>" alt="RebordTailleNVue2" id="RebordTailleNVue2">
             </div>
             <div class="carousel-item">
-                <img src="./Images/WagonFret/wagon_plat_rebords/page_produit_n/image_wagon_plat_rebord_tailleN_vue3.png" alt="WagonRebordTailleNvue3" id="RebordTailleNVue3">
+    <img src="./Images/Rebord/TailleN/<?php echo $et["Vue3"] ?>" alt="RebordTailleNVue3" id="RebordTailleNVue3">
             </div>
         </div>
     </div>
@@ -38,21 +48,20 @@
         <button id="next-btn" onclick="nextSlide()">Suivant</button>
     </div>
     <div class="droite">
-        <p>Prix unitaire : 50€ <br></p>
-        <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+    <p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
     </div>
     <div class="descriptionNRebord">
         <p>
             <span class="titre_description">Description du Produit :</span> <br>
-            Lot de 2 Wagons plat a rebords, exploités par la compagnie ferroviaire autrichienne OBB entre 1971 et 1991. 
-            Ces wagons ont été fabriquer par fleishmann avec la réference 845609 en taille N. Ils ont une longueur totale chacun sans les tampons de 136mm (13.6cm). 
-            Ils sont fabriquer en plastique et en métal.
+            <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
         </p>
     </div>
-
-
-
-
 
     <!-- footer -->
     <?php

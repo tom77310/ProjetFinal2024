@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM pagepresentation Where id = 12");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,17 +22,22 @@
     ?>
     <!-- Body -->
     <h1>Les TGV</h1>
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
     <div class="TGV">
         <div class="TGVHO">
-            <a href="./TGVHO.php"><img src="./Images/TGV/Taille HO/TGV_tailleHO_vue1.png" alt="TGVHO" id="TGVHO"></a>
+            <a href="./TGVHO.php"><img src="./Images/TGV/TailleHO/<?php echo $et["TailleHO"] ?>" alt="TGVTailleHO" id="TGVHO"></a>
             <p>TGV Taille HO</p>
         </div>
         <div class="TGVN">
-            <a href="./TGVN.php"><img src="./Images/TGV/Taille N/TGV_tailleN_vue1.png" alt="TGVN" id="TGVN"></a>
+            <a href="./TGVN.php"><img src="./Images/TGV/TailleN/<?php echo $et["TailleN"] ?>" alt="TGVTailleN" id="TGVN"></a>
             <p>TGV Taille N</p>
         </div>
     </div>
-        
+    <?php
+            }
+        ?>
     <!-- footer -->
     <?php
     require_once("./Footer.php");
@@ -33,3 +45,7 @@
 </body>
 
 </html>
+
+
+
+

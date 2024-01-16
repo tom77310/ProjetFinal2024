@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 39");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,13 +26,16 @@
         <h1> Locomotive Electrique Taille N</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Loco/loco elec/Taille N/loco_elec_tailleN_vue1.png" alt="LocoElecTailleNvue1" id="LocoElecTailleNVue1">
+    <img src="./Images/Loco/Elec/TailleN/<?php echo $et["Vue1"] ?>" alt="LocoElecTailleNVue1" id="LocoElecTailleNVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Loco/loco elec/Taille N/loco_elec_tailleN_vue2.png" alt="LocoElecTailleNvue2" id="LocoElecTailleNVue2">
+    <img src="./Images/Loco/Elec/TailleN/<?php echo $et["Vue2"] ?>" alt="LocoElecTailleNVue2" id="LocoElecTailleNVue2">
     </div>
   </div>
 </div>
@@ -35,15 +44,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 330€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionNElec">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette locomotive électrique à été mise en service par la compagnie ferroviaire suisse en 2005 et elle est toujours en service actuellement.
-    Ce modèle réduit a été fabriqué en plastique et en métal par Piko avec la réference 40583. 
-    Elle fait 118mm(11.8cm).
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 

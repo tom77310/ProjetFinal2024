@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 54");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +27,22 @@
         <h1>Voitures de Voyageurs Taille HO</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Voiture_voyageurs/Taille HO/Voiture_voyageurs_tailleHO_vue1.png" alt="VoituresVoyageursTailleHOvue1" id="VoituresVoyageursTailleHOVue1">
+    <img src="./Images/VoitureVoyageurs/TailleHO/<?php echo $et["Vue1"] ?>" alt="VoitureVoyageursTailleHOVue1" id="VoituresVoyageursTailleHOVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Voiture_voyageurs/Taille HO/Voiture_voyageurs_tailleHO_vue2.png" alt="VoituresVoyageursTailleHOvue2" id="VoituresVoyageursTailleHOVue2">
+    <img src="./Images/VoitureVoyageurs/TailleHO/<?php echo $et["Vue2"] ?>" alt="VoitureVoyageursTailleHOVue2" id="VoituresVoyageursTailleHOVue2">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Voiture_voyageurs/Taille HO/Voiture_voyageurs_tailleHO_vue3.png" alt="VoituresVoyageursTailleHOvue3" id="VoituresVoyageursTailleHOVue3">
+    <img src="./Images/VoitureVoyageurs/TailleHO/<?php echo $et["Vue3"] ?>" alt="VoitureVoyageursTailleHOVue3" id="VoituresVoyageursTailleHOVue3">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Voiture_voyageurs/Taille HO/Voiture_voyageurs_tailleHO_vue4.png" alt="VoituresVoyageursTailleHOvue4" id="VoituresVoyageursTailleHOVue4">
+    <img src="./Images/VoitureVoyageurs/TailleHO/<?php echo $et["Vue4"] ?>" alt="VoitureVoyageursTailleHOVue4" id="VoituresVoyageursTailleHOVue4">
     </div>
   </div>
 </div>
@@ -41,14 +51,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 90€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+<a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionHOVoy">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Voiture de voyageur mise en service par la compagnie ferroviaire suisse CFF en 2005 et elle est actuellement encore exploitée <br>
-    Ce modèle réduit à été fabriqué par LS MODELS avec la réference 47379f en taille HO.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -60,3 +74,11 @@
 </body>
 <script src="./js/Carrousel.js"></script>
 </html>
+
+
+
+
+
+
+
+ 

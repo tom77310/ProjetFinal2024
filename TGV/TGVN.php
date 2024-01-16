@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 48");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,13 +26,16 @@
         <h1>TGV Lyria Taille N</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/TGV/Taille N/TGV_tailleN_vue1.png" alt="TGVTailleNvue1" id="TGVTailleNVue1">
+<img src="./Images/TGV/TailleN/<?php echo $et["Vue1"] ?>" alt="TGVTailleNVue1" id="TGVTailleNVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/TGV/Taille N/TGV_tailleN_vue2.png" alt="TGVTailleNvue2" id="TGVTailleNVue2">
+<img src="./Images/TGV/TailleN/<?php echo $et["Vue2"] ?>" alt="TGVTailleNVue2" id="TGVTailleNVue2">
     </div>
   </div>
 </div>
@@ -35,14 +44,19 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 300€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionNTGV">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Ce TGV duplex Lyria a été mises en service  par la compagnie ferroviaire SNCF et la compagnie ferroviaire suisse CFF en 2005 et elle est toujours utilisée aujourd’hui. <br>
-    Ce modèle réduit a été fabriqué par KATO avec la réference 101762. 
+
+   <?php 
+   echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -54,3 +68,9 @@
 </body>
 <script src="./js/Carrousel.js"></script>
 </html>
+
+
+
+
+
+

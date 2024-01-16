@@ -1,3 +1,10 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 50");
+$ps->execute();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,17 +26,25 @@
         <a href="../PagesPrincipales/Les_Voies.php">Retour vers les Voies</a>
         <h1>Wagon Voies Taille HO</h1>
     </div>
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div class="VoiesTailleHO">
-<img src="./Images/Voies/taille HO/voie_tailleHO_vue1.png" alt="VoiesTailleHOvue1" id="VoiesTailleHOVue1">
+<img src="./Images/Voies/TailleHO/<?php echo $et["Vue1"] ?>" alt="VoieTailleHOVue1" id="VoiesTailleHOVue1">
 <div class="droiteHOVoies">
-    <p>Prix unitaire : 6€ <br></p>
-       <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
+       <a href="../PagesPrincipales/Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 </div>
 <div class="descriptionHOVoies">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-   Ce set comprend 2 aiguillages et 2 courbes de voies HO fabriqués en plastique par Marklin sous la réference 23401. 
+   <?php 
+   echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
@@ -43,3 +58,6 @@
     ?>
 </body>
 </html>
+
+
+

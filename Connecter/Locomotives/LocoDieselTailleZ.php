@@ -1,3 +1,9 @@
+<?php
+require_once("../ConnexionBDD.php");
+$ps = $BDD->prepare("SELECT * FROM produit Where id_produit = 36");
+$ps->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,13 +26,16 @@
         <h1>Locomotive Diesel Taille Z</h1>
     </div>
     <!-- Carrousel -->
+    <?php
+            while ($et = $ps->fetch()) {
+        ?>
 <div id="carousel-container">
   <div id="carousel">
     <div class="carousel-item">
-        <img src="./Images/Loco/loco_diesel/Taille Z/loco_diesel_tailleZ_vue1.png" alt="LocoDieselTailleZvue1" id="LocoDieselTailleZVue1">
+    <img src="./Images/Loco/Diesel/TailleZ/<?php echo $et["Vue1"] ?>" alt="LocoDieselTailleZVue1" id="LocoDieselTailleZVue1">
     </div>
     <div class="carousel-item">
-    <img src="./Images/Loco/loco_diesel/Taille Z/loco_diesel_tailleZ_vue2.png" alt="LocoDieselTailleZvue2" id="LocoDieselTailleZVue2">
+    <img src="./Images/Loco/Diesel/TailleZ/<?php echo $et["Vue2"] ?>" alt="LocoDieselTailleZVue2" id="LocoDieselTailleZVue2">
     </div>
   </div>
 </div>
@@ -35,14 +44,18 @@
     <button id="next-btn" onclick="nextSlide()">Suivant</button>
 </div>
 <div class="droite">
-    <p>Prix unitaire : 214€ <br></p>
+<p>Prix unitaire : <?php echo $et ["prix_produit"]?> € </p>
        <a href="./Connexion.php">Connectez-vous pour ajouter cet article a votre panier</a>
 </div>
 <div class="descriptionZDiesel">
     <p>
    <span class="titre_description">Description du Produit :</span>  <br>
-    Cette locomotive diesel à été utilisée  par la compagnie ferroviaire SNCF entre 1970 et 1990. <br>
-    Ce modèle réduit a été fabriqué en plastique par AZAR MODELS avec la réference L01-BL2A.
+   <?php 
+    echo $et ["detail_produit"] 
+    ?>
+        <?php
+            }
+        ?>
     </p>
 </div>
 
